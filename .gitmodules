@@ -1,0 +1,4 @@
+[submodule "musixtab"]
+    path = musixtab
+    url = https://github.com/huljar/musixtab
+    branch = master
