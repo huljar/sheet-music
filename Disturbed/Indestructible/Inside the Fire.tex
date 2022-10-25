@@ -1,0 +1,305 @@
+\input musixtex % MusiXTeX Hauptdatei
+\input musixsty % Werkzeuge zur Textverarbeitung
+\input musixdia % Rautenförmige Notenköpfe
+\input musixps % PostScript-Style Haltebögen/Bindebögen etc.
+\input musixtab/musixtab % Eigene Library
+
+% Höhe der Notensysteme (staves)
+\smallmusicsize
+
+% Standard-Schriftgröße
+\smalltype
+% TODO: Font mit dünneren Buchstaben finden
+
+% Anzahl der Instrumente
+\instrumentnumber2
+
+% 6 Notenlinien für das untere (= erste) Instrument
+\setlines16
+
+% Größeres Notensystem (mehr Platz zwischen Linien) für das unterste Instrument
+\setsize1\largevalue
+
+% Mehr Platz zwischen den Instrumenten
+\setinterinstrument1{3\Interligne}
+\staffbotmarg=5.2\Interligne
+\stafftopmarg=5.2\Interligne
+
+% Eigener Tab-Notenschlüssel für das untere Instrument
+\setclefsymbol1{\tabclefsymbolsmall}
+
+% Die Gitarre wird im Violinschlüssel dargestellt, aber eine Oktave tiefer gespielt
+\settrebleclefsymbol2\treblelowoct
+
+% Vorzeichen: ein b beim oberen Instrument
+\setsign2{-2}
+
+% 4/4 Takt für das obere Instrument
+\setmeter2{{\meterfrac44}}
+
+% Instrumentennamen
+%\setname1{Tab}
+%\setname2{Nts}
+
+% Keine durchgängigen Taktstriche
+\sepbarrules
+
+% Keine Taktnummer über jedem Taktstrich
+\nobarnumbers
+
+% Makros für Textplatzierungen
+\def\luptext#1{\lchar{10}{#1}}
+\def\lUptext#1{\lchar{14}{#1}}
+
+\def\midtext#1{\zchar{-8}{#1}}
+\def\lmidtext#1{\lchar{-8}{\roff{#1}}}
+
+% Text für Oktavierungs-Linien
+\def\octnumberup{\ppfftwelve8$^{va}$}
+\def\octnumberdown{\ppfftwelve8$_{ba}$}
+
+% Makros für einzelne Oktavierungen
+\def\octnoteup#1#2{%
+  \ccharnote{#1}{\tinytype\it\roffset{#2}{(8$^{va}$)}}}
+\def\octnotedown#1#2{%
+  \ccharnote{#1}{\tinytype\it\roffset{#2}{(8$_{ba}$)}}}
+
+% Abkürzung für zentrierte Pausen
+\catcodesmusic
+\def\gcenterpause{\def\atnextbar{\znotes&\centerpause\en}}
+\def\gcenterHpause#1{\def\atnextbar{\znotes&\centerHpause#1\en}}
+\endcatcodesmusic
+
+% Titelinformationen
+\fulltitle{Inside The Fire}
+\subtitle{Disturbed}
+\title{Inside The Fire}
+\author{Dan Donegan, David Draiman, Mike Wengren}
+\shortauthor{Disturbed}
+\othermention{Tuning: D Drop C}
+\maketitle
+
+% Beginn der Noten
+\startpiece%
+%
+% % % Intro % % %
+\NOTEs&\uptext{Intro}\en
+\gcenterpause\bar
+\NOTEs&\en
+\gcenterpause\bar
+\notes\str1{10}\str17\str17\str17\str17\str28\str17\str17&\ibbu0c{-1}\qb0{bNN}\tbu0\qb0N\ibbu0d0\qb0{NeN}\tbu0\qb0N\en
+\Notes\str27&\lpz d\cu d\ds\en
+\notes\str1{10}\str17\str17\str17&\ibbu0c{-1}\qb0{bNN}\tbu0\qb0N\en
+\bar
+\notes\str17\str28\str17\str17&\ibbu0d0\qb0{NeN}\tbu0\qb0N\en
+\Notes\str27&\lpz d\cu d\ds\en
+\notes\str17\str17\str17\str28\str17\str17&\ibbu0c1\qb0{NNN}\tbu0\qb0e\ibbu0b1\qb0N\tbbu0\qb0N\en
+\Notes\str27&\tbu0\lpz d\qb0d\ds\en
+\bar
+\NOtes&\qp\en
+\notes\str17\str28\str17\str17&\ibbu0d0\qb0{NeN}\tbu0\qb0N\en
+\Notes\str27&\lpz d\cu d\ds\en
+\notes\str1{10}\str17\str17\str17&\ibbu0c{-1}\qb0{bNN}\tbu0\qb0N\en
+\alaligne
+\notes\str17\str28\str17\str17&\ibbu0d0\qb0{NeN}\tbu0\qb0N\en
+\Notes\str27&\lpz d\cu d\ds\en
+\NOTes&\hp\en
+%
+% % % Verse 1 % % %
+\leftrepeat
+\notes\islurd0e\str1{10}\pulloff{-6}{-.4}\tslur0e\str17\str17\str17\str17\str28\str17\str17&%
+      \uptext{Rhy. Fig. 1}\ibbu0c{-1}\islurd0b\qb0b\pulloff{-11}{-.4}\tslur0N\qb0{NN}\tbu0\qb0N\ibbu0d0\qb0{NeN}\tbu0\qb0N\en
+\notes\str27\str17\str17\str17\str17\str1{10}\str17\str17&\ibbu0d{-1}\qb0{dNN}\tbu0\qb0N\ibbu0d0\qb0{NbN}\tbu0\qb0N\en
+\bar
+\notes\str1{10}\str17\str17\str17\str17\str28\str17\str17&\ibbu0c{-1}\qb0{bNN}\tbu0\qb0N\ibbu0d0\qb0{NeN}\tbu0\qb0N\en
+\notes\str27\str17\str17\str1{10}\str17\str18\str17\str18&\ibbu0d{-1}\qb0{dNN}\tbu0\qb0b\ibbu0d0\qb0{N_aN}\tbu0\qb0a\luptext{(end Rhy. Fig. 1)}\en
+\setrightrepeat\alaligne
+\leftrepeat
+\notes\zstr1{10}\str2{10}\zstr17\str27\zstr17\str27\zstr17\str27&\uptext{Rhy. Fig. 2}\ibbu0e{-1}\zqb0b\qb0f\zqb0N\qb0d\palmmute{-11}3\zqb0N\qb0d\tbu0\zqb0N\qb0d\en
+\notes\zstr17\str27\str28\zstr17\str27\zstr17\str27&\ibbu0d0\zqb0N\qb0d\qb0e\palmmute{-11}2\zqb0N\qb0d\tbu0\zqb0N\qb0d\en
+\notes\str27\zstr17\str27\zstr17\str27\zstr17\str27&\ibbu0c0\qb0d\palmmute{-11}4\zqb0N\qb0d\zqb0N\qb0d\tbu0\zqb0N\qb0d\en
+\notes\zstr17\str27\zstr1{10}\str2{10}\zstr17\str27\zstr17\str27&\ibbu0d0\zqb0N\qb0d\zqb0b\qb0f\palmmute{-11}2\zqb0N\qb0d\tbu0\zqb0N\qb0d\en
+\bar
+\notes\zstr1{10}\str2{10}\zstr17\str27\zstr17\str27\zstr17\str27&\ibbu0e{-1}\zqb0b\qb0f\zqb0N\qb0d\palmmute{-11}3\zqb0N\qb0d\tbu0\zqb0N\qb0d\en
+\notes\zstr17\str27\str28\zstr17\str27\zstr17\str27&\ibbu0d0\zqb0N\qb0d\qb0e\palmmute{-11}2\zqb0N\qb0d\tbu0\zqb0N\qb0d\en
+\notes\str27\zstr17\str27\zstr17\str27\zstr1{10}\str2{10}&\ibbu0d1\qb0d\palmmute{-11}2\zqb0N\qb0d\zqb0N\qb0d\tbu0\zqb0b\qb0f\en
+\notes\zstr17\str27\zstr18\str28\zstr17\str27\zstr18\str28&\palmmute{-11}1\ibbu0c0\zqb0N\qb0d\zqb0{_a}\qb0e\zqb0N\qb0d\tbu0\zqb0a\qb0e\luptext{(end Rhy. Fig. 2)}\en
+\rightrepeat
+\NOTEs&\midtext{w/ Rhy. Fig. 1 \it(2 times)}\sk\sk\hsk\en
+\gcenterHpause4\setmeter2{{\meterfrac34}}\changecontext
+\setmeter2{{\meterfrac34}}\zalaligne
+%
+% % % Pre-Chorus % % %
+\leftrepeat
+\notes\str13\str13\str13\str10\str10\str10\str15\str15\str15\str12\str12\str12&%
+      \uptext{Pre-Chorus}\Ioctfindown0{-6}\ibbu0e{-1}\qb0{eee}\tbu0\qb0c\ibbu0e1\qb0{ccf}\tbu0\qb0f\ibbu0e{-1}\qb0{fdd}\tbu0\qb0d\en
+\setvoltabox1\bar
+\notes\str13\str13\str13\str10\str10\str10\str15\str15\str15\str12\str12\str12&%
+      \ibbu0e{-1}\qb0{eee}\tbu0\qb0c\ibbu0e1\qb0{ccf}\tbu0\qb0f\ibbu0e{-1}\qb0{fdd}\tbu0\qb0d\en
+\endvoltabox\setvolta2\rightrepeat
+\notes\str13\str13\str13\str10\str10\str10&\ibbu0e{-1}\qb0{eee}\tbu0\qb0c\ibbu0e1\qb0c\tbbu0\qb0c\en
+\Notes\str15&\tbu0\qb0f\en
+\notes\str15\str15\str15\str15&\palmmute{-11}4\ibbu0f0\qb0{fff}\Toctfin0\tbu0\qb0f\luptext{(end Pre-Chorus)}\en
+\endvolta\setmeter2{{\meterfrac44}}\changecontext
+\setmeter2{{\meterfrac44}}\zalaligne
+%
+% % % Chorus % % %
+\leftrepeat
+\Notes\zstr17\str27\zstr17\str27&\uptext{Chorus}\ibu0d0\zqb0N\qb0d\tbu0\zqb0N\qb0d\en
+\notes&\qs\en
+\Notes\zstr2{10}\str3{12}&\itied0f\zqu f\itieu1j\cu j\en
+\NOtes\loffset{.8}{\gSlide h{-.4}2{-10}\gSlidet j{-.4}2{-10}b{1.7}}&\ttie0\gslide f2{-20}\zqu f\ttie1\gslidet j2{-20}N{1.3}\ccu j\en
+\Notesp\zstr23\str35&\zqup b\cup f\en
+\Notes\zstr25\str37&\zqu c\cu g\en
+\notes\zstr28\str3{10}\zstr28\str3{10}\zstr28\str3{10}&\zqu e\ccu i\ibbu0i0\zqb0e\qb0i\tbu0\zqb0e\qb0i\en
+\bar
+\Notes\zstr17\str27\zstr17\str27&\ibu0d0\zqb0N\qb0d\tbu0\zqb0N\qb0d\en
+\notes&\qs\en
+\Notes\zstr2{10}\str3{12}&\itied0f\zqu f\itieu1j\cu j\en
+\NOtes\loffset{.8}{\gSlide h{-.4}2{-10}\gSlidet j{-.4}2{-10}b{1.7}}&\ttie0\gslide f2{-20}\zqu f\ttie1\gslidet j2{-20}N{1.3}\ccu j\en
+\Notesp\zstr23\str35\zstr25\str37&\zqup b\cup f\zqup c\cup g\en
+\Notes\zstr23\str35&\zqu b\cu f\en
+\bar
+\Notes\zstr17\str27\zstr17\str27&\ibu0d0\zqb0N\qb0d\tbu0\zqb0N\qb0d\en
+\notes&\qs\en
+\Notes\zstr2{10}\str3{12}&\itied0f\zqu f\itieu1j\cu j\en
+\NOtes\loffset{.8}{\gSlide h{-.4}2{-10}\gSlidet j{-.4}2{-10}b{1.7}}&\ttie0\gslide f2{-20}\zqu f\ttie1\gslidet j2{-20}N{1.3}\ccu j\en
+\Notesp\zstr23\str35&\zqup b\cup f\en
+\Notes\zstr25\str37&\zqu c\cu g\en
+\notes\zstr28\str3{10}\zstr28\str3{10}\zstr28\str3{10}&\zqu e\ccu i\ibbu0i0\zqb0e\qb0i\tbu0\zqb0e\qb0i\en
+\bar
+\notes\zstr27\str39\zstr27\str39\zstr27\str39\zstr27\str39\zstr27\str39\zstr27\str39\zstr27\str39\zstr27\str39&%
+      \ibbu0h0\zqb0d\qb0h\zqb0d\qb0h\palmmute{-10}7\zqb0d\qb0h\tbu0\zqb0d\qb0h\ibbu0h0\zqb0d\qb0h\zqb0d\qb0h\zqb0d\qb0h\tbu0\zqb0d\qb0h\en
+\notes\zstr27\str39\zstr15\str25\zstr15\str25\zstr15\str25\zstr15\str25\zstr15\str25\zstr15\str25\zstr15\str25&%
+      \ibbu0g{-2}\zqb0d\qb0h\zqb0M\qb0c\zqb0M\qb0c\tbu0\zqb0M\qb0c\ibbu0c0\zqb0M\qb0c\zqb0M\qb0c\zqb0M\qb0c\tbu0\zqb0M\qb0c\luptext{(end Chorus)}\en
+\setrightrepeat\alaligne
+%
+% % % Verse 2 % % %
+\NOTEs&\midtext{w/ Rhy. Fig. 1}\en
+\gcenterpause\bar
+\NOTEs&\en
+\gcenterpause\bar
+\notes\str1{10}\str17\str17\str17\str17\str28\str17\str17&%
+      \uptext{Rhy. Fig. 3}\ibbu0b{-1}\qb0b\palmmute{-11}4\qb0{NN}\tbu0\qb0N\ibbu0d0\qb0{Ne}\palmmute{-11}2\qb0N\tbu0\qb0N\en
+\notes\str27\str17\str17\str17\str17\zstr1{10}\str2{10}\str17\str17&%
+      \ibbu0c{-1}\qb0d\palmmute{-11}4\qb0{NN}\tbu0\qb0N\ibbu0d0\qb0N\zqb0b\qb0f\palmmute{-11}2\qb0N\tbu0\qb0N\en
+\bar
+\notes\zstr1{10}\str2{10}\zstr17\str27\str17\str17\str17\str28\str17\str17&%
+      \ibbu0d{-1}\zqb0b\qb0f\zqb0N\qb0d\palmmute{-11}3\qb0N\tbu0\qb0N\ibbu0d0\qb0{Ne}\palmmute{-11}2\qb0N\tbu0\qb0N\en
+\notes\str27\str17\str17\zstr1{10}\str2{10}\zstr17\str27\zstr18\str28\zstr17\str27\zstr18\str28&%
+      \ibbu0d1\qb0d\palmmute{-11}2\qb0{NN}\tbu0\zqb0b\qb0f\ibbu0c0\palmmute{-11}1\zqb0N\qb0d\zqb0{_a}\qb0e\zqb0N\qb0d\tbu0\zqb0a\qb0e\luptext{(end Rhy. Fig. 3)}\en
+\alaligne
+\NOTEs&\midtext{w/ Rhy. Fig. 2}\en
+\gcenterpause\bar
+\NOTEs&\en
+\gcenterpause\bar
+\NOTEs&\midtext{w/ Rhy. Fig. 1 \it(2 times)}\sk\sk\en
+\gcenterHpause4\setmeter2{{\meterfrac34}}\changecontext
+%
+% % % Pre-Chorus % % %
+\NOTEs&\midtext{w/ Pre-Chorus}\sk\sk\en
+\gcenterHpause4\setmeter2{{\meterfrac44}}\changecontext
+%
+% % % Chorus % % %
+\NOTEs&\midtext{w/ Chorus \it(2 times)}\sk\sk\sk\en
+\gcenterHpause8\bar
+\NOTEs&\uptext{Intermezzo}\en
+\gcenterpause\bar
+\NOTEs&\en
+\gcenterpause\alaligne
+%
+% % % Solo % % %
+\NOtes\bendfull kq{.2}\str47&\uptext{\loffset3{Solo}}\bendfull kq{.2}\itieu0j\ql j\en
+\notes&\ttie0\ibbl0j0\roff{\tbbl0}\qb0j\en
+\Notes\bendfull kq{.2}\str47&\bendfull kq{.2}\qb0j\en
+\notes\bendfull kq{.2}\str47&\bendfull kq{.2}\tbbl0\tbl0\itieu0j\qb0j\ttie0\ibbl0j0\roff{\tbbl0}\qb0j\en
+\Notesp\bendfull kq{.2}\islurd0k\str47&\bendfull kq{.2}\tbl0\islurd1j\qbp0j\en
+\notes\pulloff{-3}{-2}\tslur0k\str45\str37\str45\str47&\pulloff{-4}{-2}\tslur1i\ibbu0j0\qb0{igi}\tbu0\qb0j\en
+\bar
+\NOtes\trille p{1.4}\str44&\trille r{1.4}\itied0h\qu h\en
+\notes\sk\str44\str45\trille p{2.7}\str43&\ttie0\ibbu0h0\qb0{hhi}\trille r{2.7}\tbu0\itied0h\qb0{_h}\en
+\NOtes\sk\trille p1\aharmonics{13}{.5}\str43&\ttie0\qu h\roffset{1.6}{\trille r{.8}}\octnoteup{16}{.4}\aharmonics{21}{.5}\ynq s\en
+\alaligne
+\notes\str35\str35\str35\str37\str37\str37\str45\str45&\ibbu0f1\qb0{fff}\tbu0\qb0g\ibbu0g1\qb0{ggi}\tbu0\qb0i\en
+\notes\str45\str44\str44\str44\str35\str35\str37\str37&\ibbu0h{-1}\qb0{ihh}\tbu0\qb0h\ibbu0f1\qb0{ffg}\tbu0\qb0g\en
+\bar
+\notes\str45\str45\str45\str44\str44\str44\str45\str45&\ibbu0h{-1}\qb0{iii}\tbu0\qb0h\ibbu0g1\qb0{hhi}\tbu0\qb0i\en
+\notes\str45\str47\str47\str47&\ibbl0j1\qb0{ijj}\tbl0\qb0j\en
+\notesp\trille p1\aharmonics{13}{.5}\str47&\trille p1\ibl0j1\qbp0j\en% TODO: artificial harmonics
+\notes\str60\str60&\nbbbl0\qb0k\tbl0\qb0k\en
+\alaligne
+\notes\str68\str68\str60\str60\str60\str60\str67\str67&\ibbbl0l0\qb0{ppkkkko}\tbl0\qb0o\en
+\notes\str60\str60\str60\str60\str63\str63\str60\str60&\ibbbl0l0\qb0{kkkkmmk}\tbl0\qb0k\en
+\notes\str60\str60\str65\str65\str60\str60\str60\str60&\ibbbl0l0\qb0{kknnkkk}\tbl0\qb0k\en
+\notes\str68\str60\str60\str67\str67\str60\str60\str60&\ibbbl0l0\qb0{pkkookk}\tbl0\qb0k\en
+\bar
+\notes\str63\str60\str60\str60\str60\str60\str65\str65&\ibbbl0l0\qb0{mkkkkkn}\tbl0\qb0n\en
+\notes\str60\str60\str60\str60\str63\str63\str60\str60&\ibbbl0l0\qb0{kkkkmmk}\tbl0\qb0k\en
+\notes\str68\str68\str60\str60\str67\str67\str60\str60&\ibbbl0l0\qb0{ppkkook}\tbl0\qb0k\en
+\notes\str63\str60\str60\str60\str6{10}\str68&\ibbbl0l0\qb0{mkk}\tbbbl0\qb0{kq}\tbl0\qb0p\en
+\alaligne
+\notes\isluru0o\str6{10}\pulloff{14}{-.3}\tslur0o\str68\str5{10}\str68%
+      \isluru0o\str6{12}\pulloff{14}{-.3}\str68\hammeron{15}{-.4}\str6{10}\pulloff{14}{-.3}\tslur0o\str68&%
+      \Ioctfinup0{17}\ibbbl0i0\isluru0j\qb0j\pulloff9{-.3}\tslur0i\qb0{igi}%
+      \isluru0k\qb0k\pulloff{10}{-.4}\qb0i\hammeron{11}{-.6}\qb0j\pulloff9{-.4}\tslur0i\tbl0\qb0i\en
+\notes\str5{10}\str68\isluru0o\str6{12}\pulloff{14}{-.3}\str68%
+      \hammeron{15}{-.4}\str6{10}\pulloff{14}{-.3}\tslur0o\str68\str5{10}\str68&%
+      \ibbbl0i0\qb0{gi}\isluru0k\qb0k\pulloff{10}{-.4}\qb0i%
+      \hammeron{11}{-.6}\qb0j\pulloff9{-.4}\tslur0i\qb0{ig}\tbl0\qb0i\en
+\notes\isluru0o\str6{12}\pulloff{14}{-.3}\str68\hammeron{15}{-.4}\str6{10}\pulloff{14}{-.3}\tslur0o\str68%
+      \str5{10}\str68\isluru0o\str6{12}\pulloff{14}{-.3}\str68&%
+      \ibbbl0i0\isluru1k\qb0k\pulloff{10}{-.4}\qb0i\hammeron{11}{-.6}\qb0j\pulloff9{-.4}\tslur1i\qb0{igi}%
+      \isluru1k\qb0k\pulloff{10}{-.4}\tbl0\qb0i\en
+\notes\hammeron{15}{-.4}\str6{10}\pulloff{14}{-.3}\tslur0o\str68\str5{10}\str68%
+      \isluru0o\str6{12}\pulloff{14}{-.3}\str68\hammeron{14}{-.4}\tslur0o\str6{10}&%
+      \ibbbl0i0\hammeron{11}{-.6}\qb0j\pulloff9{-.4}\tslur1i\qb0{igi}%
+      \isluru0k\qb0k\pulloff{10}{-.4}\tbbbl0\qb0i\hammeron{10}{-.6}\tslur0j\tbl0\qb0j\en
+\bar
+\Notes\bendfull lr{.5}\str5{15}&\bendfull kq{.2}\ibl0i0\qb0j\en
+\notes\str6{15}\bendfull lr{.5}\itied0m\str5{15}\ttie0\str5{15}\str6{15}&\nbbl0\qb0m\bendfull kq{.2}\tbl0\itied0j\qb0j\ttie0\ibbl0j0\qb0j\tbbl0\qb0m\en
+\Notes\bendfull lr{.5}\itied0m\zstr5{15}\itieu1o\str6{15}&\bendfull kq{.2}\tbl0\itied3j\zqb0j\itieu4m\qb0m\en
+\notes\ttie0\zstr5{15}\ttie1\str6{15}&\ttie3\ibbl0j2\roff{\tbbl0}\zqb0j\ttie4\qb0m\en
+\Notes\bendfull lr{.5}\str5{20}&\bendfull lr{.2}\qb0m\en
+\notes\str6{20}&\tbbl0\tbl0\qb0p\en
+\NOtes\bendfull lr{.5}\roffset{2.2}{\trille p{.6}}\zstr5{20}\str6{20}&\bendfull lr{.5}\roffset{2.2}{\trille p{.6}}\zql m\ql p\en
+\alaligne
+\NOTEs\bendfull nt{.5}\roffset4{\trille s{1.9}}\str6{20}&\bendfull pv{.5}\roffset4{\trille u{1.9}}\itieu0p\wh p\en
+\bar
+\NOTEs&\ttie0\roffset{19}{\Toctfin0}\wh p\en
+\bar
+%
+% % % Bridge % % %
+\NOTEs&\uptext{\loffset3{Bridge}}\en
+\gcenterpause\bar
+\NOTEs&\en
+\gcenterpause\alaligne
+\leftrepeat
+\notes\str2{13}\str2{12}\str20\str2{10}\str2{12}\str3{10}\str2{12}\str2{10}&\ibbu0g0\qb0{_hgN}\tbu0\qb0f\ibbu0h0\qb0{gig}\tbu0\qb0f\en
+\notes\str20\str2{13}\str2{12}\str2{10}\str2{12}\str3{10}\str2{12}\str2{10}&\ibbu0g0\qb0{Nhg}\tbu0\qb0f\ibbu0h0\qb0{gig}\tbu0\qb0f\en
+\setvoltabox1\bar
+\notes\str2{13}\str2{12}\str20\str2{10}\str2{12}\str3{10}\str2{12}\str2{10}&\ibbu0g0\qb0{_hgN}\tbu0\qb0f\ibbu0h0\qb0{gig}\tbu0\qb0f\en
+\notes\str3{13}\str3{10}\str3{13}\str4{11}\str3{13}\str4{11}\str4{14}\str4{11}&\ibbl0k0\qb0{_kik}\tbl0\qb0{_m}\ibbl0m0\qb0{kmn}\tbl0\qb0m\en
+\endvoltabox\setvolta2\setrightrepeat\setmeter2{{\meterfrac24}}\changecontext
+\notes\str2{13}\str2{12}\str20\str2{10}\str2{12}\str3{10}\str2{12}\str2{10}&\ibbu0g0\qb0{_hgN}\tbu0\qb0f\ibbu0h0\qb0{gig}\tbu0\qb0f\en
+\endvolta\setmeter2{{\meterfrac{29}{16}}}\changecontext
+\setmeter2{{\meterfrac{29}{16}}}\zalaligne% TODO: what meter is appropriate here?
+\notes\str3{13}\str3{10}\str3{13}\str4{11}\str3{13}\str4{11}\str4{14}\str4{11}&\ibbl0j1\qb0{_kik_mkmnm}\en
+\notes\str4{14}\str5{13}\str4{14}\str5{13}\str5{16}\str5{13}\str5{16}\str6{14}&\qb0{npn}\tbl0\qb0p\Ioctfinup0{14}\ibbl0j1\qb0{kikm}\en
+\notes\str5{16}\str6{14}\str6{17}\str6{14}&\qb0{kmnm}\en
+\Notes\gSlidet o{-.6}{2.1}{10}q{1.8}\str6{17}&\gslidet n{3.3}{10}q{2.1}\tbl0\qb0n\en
+\Notesp\str6{20}\str6{20}\gSlidet o{-.4}{2.5}{-15}p{2.2}\str6{20}&\clp p\clp p\roffset4{\Toctfin0}\gSlidet p{-.4}{3.3}{-15}q{2.5}\cl p\en
+\setmeter2{{\meterfrac44}}\changecontext
+\setmeter2{{\meterfrac44}}\zalaligne
+%
+% % % Chorus % % %
+\NOTEs&\midtext{w/ Chorus \it(2 times)}\sk\sk\sk\en
+\gcenterHpause8\bar
+%
+% % % Outro % % %
+\NOTEs&\midtext{w/ Rhy. Fig. 1 \it(4 times)}\sk\sk\sk\en
+\gcenterHpause8\bar
+\NOTEs\zstr17\str27&\wholeshift{\lsf N}\itied0N\zwh N\itieu1d\wh d\en
+\bar
+\NOTEs&\fermataup{7}\ttie0\zwh N\ttie1\wh d\en
+\Endpiece%
+\end

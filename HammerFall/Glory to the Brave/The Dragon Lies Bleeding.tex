@@ -1,0 +1,347 @@
+\input musixtex
+\input musixsty
+\input musixps
+\input musixtab/musixtab
+
+% Makros für Textplatzierungen
+\def\luptext#1{\lchar{10}{#1}}
+\def\lUptext#1{\lchar{14}{#1}}
+
+\def\midtext#1{\zchar{-8}{#1}}
+\def\lmidtext#1{\lchar{-8}{#1}}
+
+% Coda symbol in uptext
+\def\upcoda{\ \vtop{%
+  \vskip -.9em%
+  \hbox{\hss{\musicsmallfont\char85}\hss}}\ }
+\def\upCoda{\ \vtop{%
+  \vskip -.9em%
+  \hbox{\hss{\musicsmallfont\char105}\hss}}\ }
+
+% Abkürzung für zentrierte Pausen
+\catcodesmusic
+\def\gcenterpause{\def\atnextbar{\znotes&\centerpause\en}}
+\def\gcenterHpause#1{\def\atnextbar{\znotes&\centerHpause#1\en}}
+\endcatcodesmusic
+
+% Setup
+\smallmusicsize
+\smalltype
+\instrumentnumber2
+\setlines16
+\setsize1\largevalue
+\setinterinstrument1{3\Interligne}
+\staffbotmarg=5.2\Interligne
+\stafftopmarg=5.2\Interligne
+\setclefsymbol1\tabclefsymbolsmall
+\settrebleclefsymbol2\treblelowoct
+\sepbarrules
+\nobarnumbers
+\def\octnumberup{\ppfftwelve8$^{va}$}
+\def\octnumberdown{\ppfftwelve8$_{ba}$}
+
+% Tonart etc.
+\setsign26
+\setmeter2{{\meterfrac44}}
+
+% Titel
+\fulltitle{The Dragon Lies Bleeding}
+\subtitle{Hammerfall}
+\title{The Dragon Lies Bleeding}
+\author{Jesper Str\"omblad, Joacim Cans, Oscar Dronjak}
+\shortauthor{Hammerfall}
+\othermention{Tuning: Eb Standard}
+\maketitle
+
+% Noten
+\startpiece%
+%
+% % % Rhythm Figure 1 % % %
+\leftrepeat
+\notes\str2{10}\str2{10}\str27\str27\str27\str27\str27\str27&\uptext{Rhy. Fig. 1}\palmmute{-9}{50}%
+      \ibbu0f{-1}\qb0{ffd}\tbu0\qb0d\ibbu0d0\qb0{ddd}\tbu0\qb0d\en
+\notes\str27\str27\str27\str27\str27\str27\str27\str27&\ibbu0d0\qb0{ddd}\tbu0\qb0d\ibbu0d0\qb0{ddd}\tbu0\qb0d\en
+\setvoltabox{1.-3}\bar
+\notes\str2{10}\str2{10}\str29\str29\str2{10}\str2{10}\str37\str37&\ibbu0f{-1}\qb0{ffe}\tbu0\qb0e\ibbu0f1\qb0{ffg}\tbu0\qb0g\en
+\notes\str2{10}\str2{10}\str29\str29\str27\str27\str29\str29&\ibbu0f{-1}\qb0{ffe}\tbu0\qb0e\ibbu0d1\qb0{dde}\tbu0\qb0e\en
+\endvoltabox\setvolta4\rightrepeat
+\notes\str2{10}\str2{10}\str29\str29\str2{10}\str2{10}\str37\str37&\ibbu0f{-1}\qb0{ffe}\tbu0\qb0e\ibbu0f1\qb0{ffg}\tbu0\qb0g\en
+\notes\str2{10}\str2{10}\str29\str29\str2{10}\str2{10}\str37\str37&\ibbu0f{-1}\qb0{ffe}\tbu0\qb0e\ibbu0f1\qb0{ffg}\tbu0\qb0g\luptext{(end Rhy. Fig. 1)}\en
+\alaligne
+\NOTEs&\roff{\Segno\midtext{w/ Rhy. Fig. 1}}\sk\sk\sk\sk\segno{10}\en
+\gcenterHpause8\leftrepeat
+%
+% % % Rhythm Figure 2 % % %
+\Notes\zstr27\str39&\ibu0h{-1}\zqb0d\qb0h\en
+\notes\str27\str27\str27\str27&\palmmute{-9}4\nbbu0\qb0d\tbu0\qb0d\ibbu0f1\qb0d\tbbu0\qb0d\en
+\Notes\zstr27\str3{10}&\tbu0\itied0d\zqb0d\itieu1i\qb0i\en
+\NOtes\sk\zstr27\str3{10}&\ttie0\zqu d\ttie1\qu i\zqu d\qu i\en
+\bar
+\Notes\zstr27\str37&\ibu0h{-1}\zqb0d\qb0g\en
+\notes\str27\str27\str27\str27&\palmmute{-9}4\nbbu0\qb0d\tbu0\qb0d\ibbu0f1\qb0d\tbbu0\qb0d\en
+\Notes\zstr27\str39&\tbu0\itied0d\zqb0d\itieu1h\qb0h\en
+\NOtes\sk\zstr27\str39&\ttie0\zqu d\ttie1\qu h\zqu d\qu h\en
+\alaligne
+\Notes\zstr23\str35&\ibu0f{-1}\zqb0b\qb0f\en
+\notes\str23\str23\str23\str23&\palmmute{-9}4\nbbu0\qb0b\tbu0\qb0b\ibbu0e2\qb0b\tbbu0\qb0b\en
+\Notes\zstr27\str39&\tbu0\itied0d\zqb0d\itieu1h\qb0h\en
+\NOtes\sk\zstr27\str39&\ttie0\zqu d\ttie1\qu h\zqu d\qu h\en
+\setvoltabox1\bar
+\Notes\zstr25\str37&\ibu0g{-1}\zqb0c\qb0g\en
+\notes\str25\str25\str25\str25&\palmmute{-9}4\nbbu0\qb0c\tbu0\qb0c\ibbu0e1\qb0c\tbbu0\qb0c\en
+\Notes\zstr27\str39&\tbu0\itied0d\zqb0d\itieu1h\qb0h\en
+\NOtes\sk\zstr27\str39&\ttie0\zqu d\ttie1\qu h\zqu d\qu h\en
+\endvoltabox\setvolta2\rightrepeat
+\Notes\zstr25\str37&\ibu0g{-1}\zqb0c\qb0g\en
+\notes\str25\str25\str25\str25&\palmmute{-9}4\nbbu0\qb0c\tbu0\qb0c\ibbu0e1\qb0c\tbbu0\qb0c\en
+\Notes\zstr27\str39&\tbu0\itied0d\zqb0d\itieu1h\qb0h\en
+\NOtes&\ttie0\zqu d\ttie1\qu h\en
+\notes\zstr10\str22\zstr12\str24&\palmmute{-13}2\ibu0a2\zqb0K\qb0a\tbu0\zqb0L\qb0{^b}\en
+\alaligne
+%
+% % % Rhythm Figure 3 % % %
+\leftrepeat
+\NOTEs\zstr13\str25&\zwh M\wh c\en
+\bar
+\NOTes\zstr27\str39\zstr25\str37&\zhu d\hu h\zhu c\hu g\en
+\bar
+\NOTEs\zstr23\str35&\zwh b\wh f\en
+\setvoltabox1\bar
+\NOTes\zstr13\str25&\zhu M\hu c\en
+\notes\str25\str25\str27\str27\str29\str29\str25\str25&\palmmute{-9}8\ibbu0c1\qb0{ccd}\tbu0\qb0d\ibbu0e{-1}\qb0{eec}\tbu0\qb0c\en
+\endvoltabox\setvolta2\rightrepeat
+\NOTes\zstr20\str32\zstr22\str34&\zhu N\hu d\zhu a\hu e\en
+\bar
+\NOTes\zstr23\str35\zstr25\str37&\coda{10}\zhu b\hu f\zhu c\hu g\loff{\lUptext{\it D.S. al \upcoda-\upcoda}}\roffset{.82}{\Segno}\en
+\alaligne
+%
+% % % Coda 1 % % %
+\Notes\zstr23\str35\zstr23\str35\zstr23\str35\zstr23\str35&\coda{10}\Uptext{Coda 1}\palmmute{-9}4%
+      \ibu0f0\zqb0b\qb0f\zqb0b\qb0f\zqb0b\qb0f\tbu0\zqb0b\qb0f\en
+\NOtes\zstr25\str37&\zqu c\qu g\qp\en
+%
+\leftrepeat
+\NOTes\zstr10\zstr27\str39\zstr23\str35&\zhu K\zhu d\hu h\zhu b\hu f\en
+\bar
+\NOTes\zstr25\str37\zstr22\str34&\zhu c\hu g\zhu a\hu e\en
+\setvoltabox1\bar
+\NOTes\zstr27\str39\zstr23\str35&\zhu d\hu h\zhu b\hu f\en
+\bar
+\NOTes\zstr13\str25\zstr25\str37&\zhu M\hu c\zhu c\hu g\en
+\endvoltabox\Setvolta2\rightrepeat
+\NOTEs\zstr15\str27&\zwh N\wh d\en
+\bar
+\NOTes\zstr23\str35\zstr25\str37&\zhu b\hu f\zhu c\hu g\en
+\endvolta\alaligne
+\leftrepeat
+\notes\str27\str27\str27\str27\str27\str27\str27\str27&\palmmute{-9}{33}\ibbu0d0\qb0{ddd}\tbu0\qb0d\ibbu0d0\qb0{ddd}\tbu0\qb0d\en
+\notes\str23\str23\str23\str23\str23\str23\str23\str23&\ibbu0b0\qb0{bbb}\tbu0\qb0b\ibbu0b0\qb0{bbb}\tbu0\qb0b\en
+\bar
+\notes\str25\str25\str25\str25\str25\str25\str25\str25&\ibbu0c0\qb0{ccc}\tbu0\qb0c\ibbu0c0\qb0{ccc}\tbu0\qb0c\en
+\notes\str22\str22\str22\str22\str22\str22\str22\str22&\ibbu0a0\qb0{aaa}\tbu0\qb0a\ibbu0a0\qb0{aaa}\tbu0\qb0a\en
+\setvoltabox1\alaligne
+\notes\str27\str27\str27\str27\str27\str27\str27\str27&\palmmute{-9}{33}\ibbu0d0\qb0{ddd}\tbu0\qb0d\ibbu0d0\qb0{ddd}\tbu0\qb0d\en
+\notes\str23\str23\str23\str23\str23\str23\str23\str23&\ibbu0b0\qb0{bbb}\tbu0\qb0b\ibbu0b0\qb0{bbb}\tbu0\qb0b\en
+\bar
+\notes\str13\str13\str13\str13\str13\str13\str13\str13&\ibbu0M0\qb0{MMM}\tbu0\qb0M\ibbu0M0\qb0{MMM}\tbu0\qb0M\en
+\notes\str25\str25\str25\str25\str25\str25\str25\str25&\ibbu0c0\qb0{ccc}\tbu0\qb0c\ibbu0c0\qb0{ccc}\tbu0\qb0c\en
+\endvoltabox\Setvolta2\rightrepeat
+\NOTEs\zstr15\str27&\zwh N\wh d\en
+\bar
+\NOTes\zstr23\str35\zstr25\str37&\Coda{10}\zhu b\hu f\zhu c\hu g\en
+\endvolta\alaligne
+\NOTEs\zstr10\zstr27\str39&\itied0K\zwh K\itied1d\zwh d\itieu2h\wh h\en
+\bar
+\NOTes&\ttie0\itied0K\zhu K\ttie1\itied1d\zhu d\ttie2\itieu2h\hu h\en
+\NOtesp&\ttie0\zqup K\ttie1\zqup d\ttie2\zqup h\en
+\Notes\bendfull7{14}{.5}\str5{15}&\bendfull{11}{18}{.5}\cl q\en
+\bar
+\NOtes\bendfull7{14}{.5}\roff{\gSlidet8{-.4}{2.5}{-15}{11}{2.3}}\str5{15}&%
+      \bendfull{11}{18}{.5}\roff{\gSlidet{12}{-.4}{3.3}{-15}{13}{2.6}}\ql q\qp\en
+\NOTes&\hp\en
+\bar
+\NOTes&\hp\en
+\NOtesp&\qpp\en
+\Notes\zstr25\str37&\zqu c\cu g\en
+\alaligne
+\Notes\zstr27\str39&\zqu d\cu h\en
+\notes\str10\str10&\palmmute{-12}{25}\Ioctfindown0{-7}\ibbu0d0\qb0d\tbu0\qb0d\en
+\Notes\str10&\ibu0f0\qb0d\en
+\notes\str10\str10&\nbbu0\qb0d\tbu0\qb0d\en
+\Notes\str10&\ibu0f0\qb0d\en
+\notes\str10\str10&\nbbu0\qb0d\tbu0\qb0d\en
+\Notes\str10&\ibu0f0\qb0d\en
+\notes\str10\str10&\nbbu0\qb0d\tbu0\qb0d\en
+\bar
+\Notes\str10&\ibu0f0\qb0d\en
+\notes\str10\str10&\nbbu0\qb0d\tbu0\qb0d\en
+\Notes\str10&\ibu0f0\qb0d\en
+\notes\str10\str10&\nbbu0\qb0d\tbu0\qb0d\en
+\Notes\str10&\ibu0f0\qb0d\en
+\notes\str10\str10&\nbbu0\qb0d\tbu0\qb0d\en
+\Notes\str10\zstr25\str37&\Toctfin0\cu d\zqu c\cu g\en
+\bar
+\Notes\zstr10\zstr27\str39&\zqu K\zqu d\cu h\en
+\notes\str10\str10&\palmmute{-12}{25}\Ioctfindown0{-7}\ibbu0d0\qb0d\tbu0\qb0d\en
+\Notes\str10&\ibu0f0\qb0d\en
+\notes\str10\str10&\nbbu0\qb0d\tbu0\qb0d\en
+\Notes\str10&\ibu0f0\qb0d\en
+\notes\str10\str10&\nbbu0\qb0d\tbu0\qb0d\en
+\Notes\str10&\ibu0f0\qb0d\en
+\notes\str10\str10&\nbbu0\qb0d\tbu0\qb0d\en
+\bar
+\Notes\str10&\ibu0f0\qb0d\en
+\notes\str10\str10&\nbbu0\qb0d\tbu0\qb0d\en
+\Notes\str10&\ibu0f0\qb0d\en
+\notes\str10\str10&\nbbu0\qb0d\tbu0\qb0d\en
+\Notes\str10&\ibu0f0\qb0d\en
+\notes\str10\str10&\nbbu0\qb0d\tbu0\qb0d\en
+\Notes\str10\zstr25\str37&\Toctfin0\cu d\zqu c\cu g\en
+\alaligne
+\leftrepeat
+\Notes\zstr10\zstr27\str39&\zqu K\zqu d\cu h\en
+\notes\str10\str10&\palmmute{-12}6\Ioctfindown0{-7}\ibbu0d0\qb0d\tbu0\qb0d\en
+\Notes\str10&\ibu0f0\qb0d\en
+\notes\str10\str10&\nbbu0\qb0d\Toctfin0\tbu0\qb0d\en
+\Notes\zstr13\zstr25\str35&\zqu{Mc}\cu f\en
+\notes\str13\str13&\palmmute{-12}6\ibbu0M0\qb0M\tbu0\qb0M\en
+\Notes\str13&\ibu0a0\qb0M\en
+\notes\str13\str13&\nbbu0\qb0M\tbu0\qb0M\en
+\bar
+\Notes\zstr22\zstr34\str44&\zqu{ae}\cu h\en
+\notes\str22\str22&\palmmute{-12}6\ibbu0a0\qb0a\tbu0\qb0a\en
+\Notes\str22&\ibu0c0\qb0a\en
+\notes\str22\str22&\nbbu0\qb0a\tbu0\qb0a\en
+\Notes\zstr10\zstr22\str32&\zqu{Ka}\cu d\en
+\notes\str10\str10&\palmmute{-12}2\ibbu0M0\qb0K\tbu0\qb0K\en
+\Notes\zstr10\zstr22\str32\zstr12\str24&\zqu{Ka}\cu d\zqu L\cu{^b}\en
+\bar
+\NOTes\zstr13\zstr25\str35\zstr23\zstr35\str45&\zhu{Mc}\hu f\zhu{bf}\hu i\en
+\setvoltabox1\bar
+\NOTes\zstr15\zstr27\str37\zstr25\zstr37\str47&\zhu{Nd}\hu g\zhu{cg}\hu j\en
+\endvoltabox\setvolta2\rightrepeat
+\NOTes\zstr25\zstr37\str47\zstr27\zstr39\str49&\zhu{cg}\hu j\zhu{dh}\hu k\en
+\alaligne
+%
+% % % Bridge % % %
+\leftrepeat
+\notes\str4{12}\str4{12}\str4{12}\str4{12}\str4{12}\str4{12}\str4{12}\str4{12}&\palmmute{-9}{31}\ibbl0m0\qb0{mmm}\tbl0\qb0m\ibbl0m0\qb0{mmm}\tbl0\qb0m\en
+\notes\str4{12}\str4{12}\str4{12}\str4{12}\str4{12}\str4{12}\str4{12}\str4{12}&\ibbl0m0\qb0{mmm}\tbl0\qb0m\ibbl0m0\qb0{mmm}\tbl0\qb0m\en
+\bar
+\notes\str4{11}\str4{11}\str4{11}\str4{11}\str4{11}\str4{11}\str4{11}\str4{11}&\ibbl0l0\qb0{lll}\tbl0\qb0l\ibbl0l0\qb0{lll}\tbl0\qb0l\en
+\notes\str4{11}\str4{11}\str4{11}\str4{11}\str4{11}\str4{11}\isluru0k\str4{12}\pulloff{11}{-.7}\tslur0k\str4{11}&%
+      \ibbl0l0\qb0{lll}\tbl0\qb0l\ibbl0l0\qb0{ll}\isluru0m\qb0m\pulloff{12}{-.8}\tslur0l\tbl0\qb0l\en
+\setvoltabox1\alaligne
+\Notesp\str49\str4{11}&\clp{kl}\en
+\Notes\str4{12}&\cl m\en
+\Notesp\str5{10}\str4{12}&\clp{nm}\en
+\Notes\str5{10}&\cl n\en
+\bar
+\Notesp\bendfull7{14}{.5}\str5{10}\str5{10}&\bendfull8{15}{.5}\clp{nn}\en
+\Notes\str4{12}&\cl m\en
+\Notesp\str4{11}\str49&\clp{lk}\en
+\Notes\str3{12}&\cl j\en
+\endvoltabox\Setvolta2\rightrepeat
+\NOtes\str49\str4{12}\str4{11}\str3{12}&\ql{kmlj}\en
+\bar
+\NOtes\str49\str4{12}\bendfull6{12}{.5}\str4{12}\str4{11}&\ql{km}\bendfull8{15}{.5}\ql{ml}\en% TODO: \bendfullrelease
+\endvolta\alaligne
+\leftrepeat
+\Notes\str4{12}&\palmmute{-9}{17}\ibl0k0\qb0m\en% TODO: 17.5 pm length
+\notes\str4{12}\str4{12}&\nbbl0\qb0m\tbl0\qb0m\en
+\Notes\str4{12}&\ibl0k0\qb0m\en
+\notes\str4{12}\str4{12}&\nbbl0\qb0m\tbl0\qb0m\en
+\Notes\str4{12}&\ibl0k0\qb0m\en
+\notes\str4{12}\str4{12}&\nbbl0\qb0m\tbl0\qb0m\en
+\Notes\str4{12}&\ibl0k0\qb0m\en
+\notes\str4{12}\str4{12}&\nbbl0\qb0m\tbl0\qb0m\en
+\bar
+\Notes\str4{11}&\ibl0j0\qb0l\en
+\notes\str4{11}\str4{11}&\nbbl0\qb0l\tbl0\qb0l\en
+\Notes\str4{11}&\ibl0j0\qb0l\en
+\notes\str4{11}\str4{11}&\nbbl0\qb0l\tbl0\qb0l\en
+\Notes\str4{11}&\ibl0j0\qb0l\en
+\notes\str4{11}\str4{11}&\nbbl0\qb0l\tbl0\qb0l\en
+\Notes\str4{11}&\ibl0j0\qb0l\en
+\notes\isluru0k\str4{12}\pulloff{11}{-.9}\tslur0k\str4{11}&\isluru0m\nbbl0\qb0m\pulloff{12}{-.8}\tslur0l\tbl0\qb0l\en
+\setvoltabox1\alaligne
+\Notesp\str49\str4{11}&\clp{kl}\en
+\Notes\str4{12}&\cl m\en
+\Notesp\str5{10}\str4{12}&\clp{nm}\en
+\Notes\str5{10}&\cl n\en
+\bar
+\Notesp\bendfull7{14}{.5}\str5{10}\str5{10}&\bendfull8{15}{.5}\clp{nn}\en
+\Notes\str4{12}&\cl m\en
+\Notesp\str4{11}\str49&\clp{lk}\en
+\Notes\str3{12}&\cl j\en
+\endvoltabox\Setvolta2\rightrepeat
+\NOtes\str49\str4{12}\str4{11}\str3{12}&\ql{kmlj}\en
+\bar
+\NOtes\str49\str4{12}\bendfull6{12}{.5}\str4{12}\str4{11}&\ql{km}\bendfull8{15}{.5}\ql{ml}\en% TODO: \bendfullrelease
+\endvolta\alaligne
+\leftrepeat
+\NOtesp&\qpp\en
+\Notes\str39&\cu h\en
+\Notesp\str39\str3{10}&\cup h\clp i\en
+\Notes\str47&\cl j\en
+\bar
+\NOtesp\trille{11}1\str47&\trille{11}1\qlp j\en
+\notes\str3{10}\str39&\ibbu0i{-3}\qb0i\tbu0\qb0h\en
+\NOTes\trille{11}1\str37&\trille{11}1\hu g\en
+\bar
+\NOtesp&\qpp\en
+\Notes\str49&\cl k\en
+\Notesp\str49\str4{11}&\clp{kl}\en
+\Notes\str4{12}&\cl m\en
+\setvoltabox1\bar
+\NOtesp\trille{11}1\str5{12}&\roff{\trille{12}{.8}}\qlp o\en
+\notes\str5{13}\str5{12}&\ibbl0p{-3}\qb0p\tbl0\qb0o\en
+\NOtes\trille{11}1\str5{10}\str4{11}&\trille{12}1\ql{nl}\en
+\endvoltabox\setvolta2\rightrepeat
+\NOtes\str5{15}\str5{12}\str5{13}\str5{10}&\ql{qopn}\en
+\bar
+\NOTes\str5{12}\str5{10}&\hl{on}\loff{\lUptext{\it D.S. al \upcoda-\upcoda\ al \upCoda-\upCoda}}\segno{10}\en
+\alaligne
+%
+% % % Coda 2 % % %
+\Notes\zstr23\str35\zstr23\str35\zstr23\str35\zstr23\str35&\Coda{10}\Uptext{Coda 2}\palmmute{-9}4%
+      \ibu0f0\zqb0b\qb0f\zqb0b\qb0f\zqb0b\qb0f\tbu0\zqb0b\qb0f\en
+\NOtes\zstr25\str37&\zqu c\qu g\qp\en
+%
+% % % Tonartwechsel % % %
+\setsign21\setleftrepeat\changecontext
+\NOTes\zstr28\str3{10}\zstr24\str36&\zhu e\hu i\zhu c\hu g\en
+\bar
+\NOTes\zstr26\str38\zstr23\str35&\zhu d\hu h\zhu b\hu f\en
+\setvoltabox1\bar
+\NOTes\zstr28\str3{10}\zstr24\str36&\zhu e\hu i\zhu c\hu g\en
+\bar
+\NOTes\zstr14\str26\zstr26\str38&\zhu N\hu d\zhu d\hu h\en
+\endvoltabox\Setvolta2\rightrepeat
+\NOTEs\zstr16\str28&\zwh a\wh e\en
+\bar
+\NOTes\zstr24\str36\zstr26\str38&\zhu c\hu g\zhu d\hu h\en
+\endvolta\alaligne
+\leftrepeat
+\notes\str28\str28\str28\str28\str28\str28\str28\str28&\palmmute{-9}{50}\ibbu0e0\qb0{eee}\tbu0\qb0e\ibbu0e0\qb0{eee}\tbu0\qb0e\en
+\notes\str24\str24\str24\str24\str24\str24\str24\str24&\ibbu0c0\qb0{ccc}\tbu0\qb0c\ibbu0b0\qb0{ccc}\tbu0\qb0c\en
+\bar
+\notes\str26\str26\str26\str26\str26\str26\str26\str26&\ibbu0d0\qb0{ddd}\tbu0\qb0d\ibbu0d0\qb0{ddd}\tbu0\qb0d\en
+\notes\str23\str23\str23\str23\str23\str23\str23\str23&\ibbu0b0\qb0{bbb}\tbu0\qb0b\ibbu0b0\qb0{bbb}\tbu0\qb0b\en
+\setvoltabox1\bar
+\notes\str28\str28\str28\str28\str28\str28\str28\str28&\ibbu0e0\qb0{eee}\tbu0\qb0e\ibbu0e0\qb0{eee}\tbu0\qb0e\en
+\notes\str24\str24\str24\str24\str24\str24\str24\str24&\ibbu0c0\qb0{ccc}\tbu0\qb0c\ibbu0b0\qb0{ccc}\tbu0\qb0c\en
+\alaligne
+\notes\str14\str14\str14\str14\str14\str14\str14\str14&\palmmute{-11}{16}\ibbu0N0\qb0{NNN}\tbu0\qb0N\ibbu0N0\qb0{NNN}\tbu0\qb0N\en
+\notes\str26\str26\str26\str26\str26\str26\str26\str26&\ibbu0d0\qb0{ddd}\tbu0\qb0d\ibbu0d0\qb0{ddd}\tbu0\qb0d\en
+\endvoltabox\Setvolta2\rightrepeat
+\NOTEs\zstr16\str28&\zwh a\wh e\en
+\bar
+\notes\str2{11}\str2{11}\str2{10}\str2{10}\str2{11}\str2{11}\str2{13}\str2{13}&\palmmute{-11}{16}\ibbu0g{-1}\qb0{ggf}\tbu0\qb0f\ibbu0g1\qb0{ggh}\tbu0\qb0h\en
+\notes\str2{11}\str2{11}\str2{10}\str2{10}\str28\str28\str2{10}\str2{10}&\ibbu0g{-1}\qb0{ggf}\tbu0\qb0f\ibbu0e1\qb0{eef}\tbu0\qb0f\en
+\bar
+\Notes\str2{11}&\lsf g\cu g\en
+\NOtesp\gSlidet2{-.4}{2.5}{-15}{-3}{1.6}\str2{11}&\gSlidet2{-.4}{3.3}{-15}{-3}{1.6}\lsf g\qup g\en
+\NOTes&\hp\en
+\Endpiece%
+\end
