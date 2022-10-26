@@ -1,2 +1,14 @@
+# Compiled sheets
 *.pdf
-musixtex.log
+
+# MusiXTeX log files
+*.log
+
+# Auxiliary files that are created during compilation
+*.dvi
+*.mx1
+*.mx2
+*.ps
+
+# vim swap files
+.*.swp
