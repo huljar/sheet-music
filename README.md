@@ -1,3 +1,3 @@
-# Guitar Tabs
+# Sheet Music
 
-This is a collection of guitar tabs that I have written using MusiXTeX.
+This is a collection of guitar tabs and other sheet music that I have written using MusiXTeX.
