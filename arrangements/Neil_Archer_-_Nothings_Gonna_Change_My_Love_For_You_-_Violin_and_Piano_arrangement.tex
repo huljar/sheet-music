@@ -12,6 +12,7 @@
 \setname1{Piano}
 \setname2{Violin}
 \nobarnumbers
+\interinstrument=4\internote % a bit more space between violin and piano staves
 
 % Title
 \fulltitle{Nothing's Gonna Change My Love For You}
@@ -25,9 +26,31 @@
 % Start serious business
 \startpiece%
 %
-% Actual notes
-\notes\zhl J\zhl N\zhl c|\zwh g\ibbu0k{-1}\tbbu0\qb0g&\en
-\Notes\en
+% Bar 1
+\notes\zhl J\zhl N\hl c|\zwh g\ibbu0k{-1}\roff{\tbbu0}\qb0k&\en
+\Notes|\qb0l&\en
+\notes|\roff{\tbbu0\tqh0g}\ibbu0j{-1}\qb0{jig}\isluru0g\tqu0g&\en
+% Mid
+\notes\zhl M\hl c|\tslur0g\ibbu0g1\roff{\tbbu0}\qb0g&\pause\en
+\Notes|\qb0h&\en
+\notes|\roff{\tbbu0\isluru0h\tqu0h}\tslur0h\ibbu0h1\qb0{hij}\tqu0l&\en
+\bar
+% Bar 2
+\NOtes\zql N\ql d|\hup g&\ql k\en
+\Notes|&\ibu0k{-3}\qb0k\tqu0f\en
+% Mid
+\Notes\ibl0L1\zqbp0L\lqp a\zqbp0b\qbp0d|&\ibu1k0\qb1e\en
+\notes\sk\roff{\tbbl0\tql0{^M}}|&\qb1m\en
+\Notes\ql{^N}|\zqu e\qu{^g}&\qb1l\tqu1k\en
+\bar
+% Bar 3
+\NOtes\isluru0a\ql a|\zqu e\qu i&\ql j\en
+\Notes\tslur0a\ibl0a{-1}\qbp0a|\qu h&\ibu1h1\qb1h\en
+\notes\sk\roff{\tbbl0\tql0{=N}}|&\nbbu1\qb1i\tqu1j\en
+% Mid
+\Notes\hl{^M}|\hu h&\ibl0j{-1}\qb0l\en
+\notes|&\nbbl0\qb0k\isluru0h\tql0h\en
+\Notes|&\tslur0h\ibu0h1\qb0h\tqu0i\en
 %
 % Wrap up serious business
 \Endpiece%
