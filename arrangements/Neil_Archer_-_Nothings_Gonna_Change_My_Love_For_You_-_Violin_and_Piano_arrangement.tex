@@ -9,10 +9,10 @@
 \setstaffs12 % piano has 2 staves
 \setclef1{\bass} % bass clef for the lower piano staff
 \generalmeter{\meterfrac44} % 4/4 meter
-\setname1{Piano}
-\setname2{Violin}
-\nobarnumbers
-\interinstrument=4\internote % a bit more space between violin and piano staves
+%\setname1{Piano}
+%\setname2{Violin}
+%\nobarnumbers
+\interinstrument=6\internote % a bit more space between violin and piano staves
 
 % Title
 \fulltitle{Nothing's Gonna Change My Love For You}
@@ -29,28 +29,83 @@
 % Bar 1
 \notes\zhl J\zhl N\hl c|\zwh g\ibbu0k{-1}\roff{\tbbu0}\qb0k&\en
 \Notes|\qb0l&\en
-\notes|\roff{\tbbu0\tqh0g}\ibbu0j{-1}\qb0{jig}\isluru0g\tqu0g&\en
+\notes|\loff{\nbbu0}\tqh0g\ibbu0j{-1}\qb0{jig}\isluru0g\tqu0g&\en
 % Mid
 \notes\zhl M\hl c|\tslur0g\ibbu0g1\roff{\tbbu0}\qb0g&\pause\en
 \Notes|\qb0h&\en
-\notes|\roff{\tbbu0\isluru0h\tqu0h}\tslur0h\ibbu0h1\qb0{hij}\tqu0l&\en
+\notes|\loff{\nbbu0}\isluru0h\tqu0h\tslur0h\ibbu0h1\qb0{hij}\tqu0l&\en
 \bar
 % Bar 2
 \NOtes\zql N\ql d|\hup g&\ql k\en
-\Notes|&\ibu0k{-3}\qb0k\tqu0f\en
+\Notes\ql d|&\ibu0k{-3}\qb0k\tqu0f\en
 % Mid
 \Notes\ibl0L1\zqbp0L\lqp a\zqbp0b\qbp0d|&\ibu1k0\qb1e\en
-\notes\sk\roff{\tbbl0\tql0{^M}}|&\qb1m\en
+\notes\sk\loff{\nbbl0}\tql0{^M}|&\qb1m\en
 \Notes\ql{^N}|\zqu e\qu{^g}&\qb1l\tqu1k\en
 \bar
 % Bar 3
 \NOtes\isluru0a\ql a|\zqu e\qu i&\ql j\en
 \Notes\tslur0a\ibl0a{-1}\qbp0a|\qu h&\ibu1h1\qb1h\en
-\notes\sk\roff{\tbbl0\tql0{=N}}|&\nbbu1\qb1i\tqu1j\en
+\notes\sk\loff{\nbbl0}\tql0{=N}|&\nbbu1\qb1i\tqu1j\en
 % Mid
 \Notes\hl{^M}|\hu h&\ibl0j{-1}\qb0l\en
 \notes|&\nbbl0\qb0k\isluru0h\tql0h\en
 \Notes|&\tslur0h\ibu0h1\qb0h\tqu0i\en
+\bar
+% Bar 4
+\notes\smallnotesize\grcu H|&\en
+\Notes\zqu{DH}\qu K\sk\zqu E\qu L|\zqu {cf}\qu h\sk\zqu d\qu g&\ibl0j0\qb0j\tql0j\ibl0j0\qb0j\en
+\notes|&\nbbl0\qb0i\tql0j\en
+% Mid
+\Notes\zqu{GK}\qu{=M}|\islurd0f\zqu{fh}\qu j&\ibl0l{-1}\qb0l\en
+\notes|\sk\sk\tslur0f\ibu1f0\qb1f\sk\tqu1f&\nbbl0\qb0k\isluru1j\tql0j\tslur1j\ibbl2j0\roff{\tbbl2}\qb2{ji}\sk\loff{\nbbl2}\isluru0j\tqb2j\en
+\alaligne
+% Bar 5
+\NOtes\zql{JN}\ql{cc}|\zwh e\wh g&\tslur0j\isluru1j\hl j\en
+% Mid
+\notes\hl c|&\tslur1j\ibbu0j{-2}\qb0{jig}\tqu0e\en
+\setclef2\bass\changeclefs
+\notes|&\ibbl0c{-2}\qb0{cbN}\tql0L\en
+\setclef2\treble\changeclefs
+\bar
+% Bar 6
+\notes\smallnotesize\islurd0G\grcu G|&\en
+\Notes\tslur0G\zqu{CG}\qu J|\islurd0N\zqu N\islurd1c\qu c&\ibu0g0\qb0g\en
+\notes\sk\sk\ibl1N0\qb1N\sk\tql1N|\sk\sk\ibu2c0\tslur0N\zqb2N\tslur1c\qb2c\sk\tqu2c&\nbbu0\qb0e\islurd2g\tqu0g\tslur2g\ibbu0g0\roff{\tbbu0}\qb0{ge}\sk\loff{\nbbu0}\islurd0g\tqu0g\en
+% Mid
+\Notes\zql I\ql N|\islurd1b\zqu b\islurd2d\qu d&\tslur0g\ibu0g0\qb0g\en
+\notes\sk\sk\ql N|\ibu1d{-1}\tslur1b\zqb1b\tslur2d\qb1d\sk\tqu1c&\nbbu0\qb0e\islurd0g\tqu0g\tslur0g\ibbl0g1\roff{\tbbl0}\qb0{gk}\sk\loff{\nbbl0}\isluru0j\tql0j\en
+\bar
+% Bar 7
+\Notes\ibl0H1\qb0{HLb}\tql0c|\zhu c\hu e&\tslur0j\hl j\en
+% Mid
+\Notes\zqu{GL}\qu N|\ibu0g{-1}\zqb0d\qb0g&\ibl1i0\qb1i\en
+\notes\sk\sk\ibl2N{-1}\qb2N|\nbbu0\qb0e\islurd0d\tqu0d\tslur0d\ibbu0d{-1}\roff{\tbbu0}\qb0d\tbu0\qbp0c&\nbbl1\qb1j\isluru1i\tql1i\tslur1i\ibbu1i{-3}\roff{\tbbu1}\qb1i\tbu1\qbp1g\en
+\Notes\tql2L|&\en
+\bar
+% Bar 8
+\Notes\zqu{FJ}\qu M|\hu a&\ibu0e{-1}\qb0e\en
+\notes|&\nbbu0\qb0c\islurd0c\tqu0c\en
+\NOtes\ql M|&\tslur0c\qu c\en
+% Mid
+\NOtes\zhu E\hu L|\hu N&\qu{dc}\en
+\alaligne
+% Bar 9
+\Notes\zqu D\qu K|\zqu a\qu c&\ibu0f1\qb0f\en
+\notes\sk\sk\ql K|\sk\sk\ibu1a0\qb1a\sk\tqu1a&\nbbu0\qb0g\islurd0h\tqu0h\ibbu0h{-1}\roff{\tbbu0}\qb0{hg}\sk\loff{\nbbu0}\islurd0d\tqu0d\en
+% Mid
+\Notes\ibu0M0\zqb0{GK}\qb0M|\zqu a\qu c&\tslur0d\hu d\en
+\notes\nbbu0\qb0K\isluru0M\tqu0M|&\en
+\notes|\smallnotesize\grcu a&\en
+\Notes\tslur0M\ql M|\ibu0b{-1}\qbp0b\loff{\nbbu0}\islurd0N\tqu0N&\en
+\bar
+% Bar 10
+\notes\qu J\sk\sk\sk\ibl0N0\qb0N\sk\tql0N|\tslur0N\ibbu0N0\roff{\tbbu0}\qb0N\tbu0\islurd0N\qbp0N\sk\sk\tslur0N\ibu0N2\qb0N\sk\tqu0c&\ibu0g0\qb0g\sk\nbbu0\qb0e\islurd0g\tqu0g\tslur0g\ibbu0g0\roff{\tbbu0}\qb0{ge}\sk\loff{\nbbu0}\islurd0g\tqu0g\en
+% Mid
+\Notes\zql I\ql N|\islurd1b\qu b&\tslur0g\ibu0g0\qb0g\en
+\notes\sk\sk\ql N|\sk\sk\tslur1b\ibu1b1\qb1b\sk\islurd1c\tqu1c&\nbbu0\qb0e\islurd0g\tqu0g\tslur0g\ibbu0g1\roff{\tbbu0}\qb0{gk}\sk\loff{\nbbu0}\islurd0j\tqu0j\en
+\bar
+% Bar 11
 %
 % Wrap up serious business
 \Endpiece%
