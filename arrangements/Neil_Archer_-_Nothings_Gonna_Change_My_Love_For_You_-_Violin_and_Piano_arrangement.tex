@@ -1,6 +1,7 @@
 \input musixtex
 \input musixsty
 \input musixps
+\input musixppff
 
 % Setup
 \smallmusicsize
@@ -35,7 +36,7 @@
 \startpiece%
 %
 % Bar 1
-\notes\zhl J\zhl N\hl c|\zwh g\ibbu0k{-1}\roff{\tbbu0}\qb0k&\en
+\notes\zcn{-8}{\it{with pedal}}\zhl J\zhl N\hl c|\zwh g\ibbu0k{-1}\roff{\tbbu0}\qb0k&\zcn{L}{\p}\Uptext{\metron{\qu}{80}}\en
 \Notes|\qb0l&\en
 \notes|\loff{\nbbu0}\tqh0g\ibbu0j{-1}\qb0{jig}\itied0g\tqu0g&\en
 % Mid
@@ -65,11 +66,11 @@
 \bar
 % Bar 4
 \notes\smallnotesize\grcu H|&\en
-\Notes\zqu{DH}\qu K\sk\zqu E\qu L|\zql{cfh}\ibu0j0\qb0j\tqu0j\zql{dg}\ibu0j0\qb0j&\en
+\Notes\zqu{DH}\qu K\sk\zqu E\qu L|\zql{cfh}\ibu0j0\qb0j\tqu0j\zql{dg}\ibu0j0\qb0j&\sk\sk\idecresc0\en
 \notes|\nbbu0\qb0i\tqu0j&\en
 % Mid
 \Notes\zqu{GK}\qu{=M}|\itied0f\zql{fhj}\ibu0l{-1}\qb0l&\en
-\notes|\nbbu0\qb0k\itieu1j\tqu0j\ttie0\ibl0f0\zqb0f\ttie1\ibbu1j0\roff{\tbbu1}\qb1{ji}\tql0f\loff{\nbbu1}\itieu0j\tqu1j&\en
+\notes|\nbbu0\qb0k\itieu1j\tqu0j\ttie0\ibl0f0\zqb0f\ttie1\ibbu1j0\roff{\tbbu1}\qb1{ji}\tql0f\loff{\nbbu1}\itieu0j\tqu1j&\sk\sk\sk\sk\tdecresc0\en
 \def\atnextbar{\znotes|&\centerbar{\cpause}\en}%
 \bar
 % Bar 5
@@ -83,7 +84,7 @@
 \bar
 % Bar 6
 \notes\smallnotesize\itied0G\grcu G|&\en
-\Notes\ttie0\zqu{CG}\qu J|\itied0N\zqu N\itied1c\qu c&\ibu0g0\qb0g\en
+\Notes\ttie0\zqu{CG}\qu J|\itied0N\zqu N\itied1c\qu c&\zcn{-11}{\mp}\ibu0g0\qb0g\en
 \notes\sk\sk\ibl1N0\qb1N\sk\tql1N|\sk\sk\ibu2c0\ttie0\zqb2N\ttie1\qb2c\sk\tqu2c&\nbbu0\qb0e\itied2g\tqu0g\ttie2\ibbu0g0\roff{\tbbu0}\qb0{ge}\sk\loff{\nbbu0}\itied0g\tqu0g\en
 % Mid
 \Notes\zql I\ql N|\itied1b\zqu b\itied2d\qu d&\ttie0\ibu0g0\qb0g\en
@@ -136,15 +137,15 @@
 \bar
 % Bar 13
 \Notes\zqu D\qu K|\zqu a\qu c&\ibu0f1\qb0f\en
-\notes\sk\sk\ql K|\sk\sk\ibu1a0\qb1a\sk\tqu1a&\nbbu0\qb0g\itied0h\tqu0h\ttie0\ibbu0h{-1}\roff{\tbbu0}\qb0{hg}\sk\loff{\nbbu0}\itied0d\tqu0d\en
+\notes\sk\sk\ql K|\sk\sk\ibu1a0\qb1a\sk\tqu1a&\Idecresc0{-10}0\nbbu0\qb0g\itied0h\tqu0h\ttie0\ibbu0h{-1}\roff{\tbbu0}\qb0{hg}\sk\loff{\nbbu0}\itied0d\tqu0d\en
 % Mid
-\Notes\ibu0K1\zqb0{GK}\qb0M|\zqu a\qu c&\ttie0\hu d\en
+\Notes\ibu0K1\zqb0{GK}\qb0M|\zqu a\qu c&\ttie0\hu d\Tcresc0{-10}0\en
 \notes\nbbu0\qb0K\tqu0N|&\en
 \Notes\ibl0N{-2}\qb0N|\ibu1b1\qbp1b&\en
 \notes\nbbl0\qb0N\tql0K|\sk\loff{\nbbu1}\itied0c\tqu1c&\en
 \bar
 % Bar 14
-\Notes\ibu0L{-2}\zqb0F\qb0M|\ttie0\zqu c\qu f&\ibl1h1\qb1h\en
+\Notes\ibu0L{-2}\zqb0F\qb0M|\ttie0\zqu c\qu f&\zcn{-12}{\mp}\ibl1h1\qb1h\en
 \notes\tqu0J\sk\ibu2M{-2}\qb2a\sk\nbbu2\qb2F\tqu2J|\sk\sk\ibu2c0\qb2c\sk\tqu2c&\nbbl1\qb1i\itieu0j\tql1j\ttie0\ibbl1j0\roff{\tbbl1}\qb1{jk}\sk\itieu0j\loff{\nbbl1}\tql1j\en
 % Mid
 \notes\ibbu0J0\zqb0E\qb0L\tbbu0\qb0J\tqu0L\sk\ql L|\itieu1c\qu c\sk\sk\sk\ttie1\ibbu0c1\roff{\tbbu0}\qb0c&\ttie0\ibu1j{-1}\qb1j\sk\nbbu1\qb1g\itied0g\tqu1g\ttie0\ibu1g{-1}\qbp1g\en
@@ -164,8 +165,8 @@
 \Notes\zqu D\qu K|\itied0c\zqu c\itied1f\qu f&\ibl0h1\qb0h\en
 \notes\sk\sk\ibl1K0\qb1K\sk\tql1K|\sk\sk\ttie0\ttie1\ibbu1f0\roff{\tbbu1}\zqb1c\qb1{fc}\sk\loff{\nbbu1}\tqu1f&\nbbl0\qb0i\itieu0j\tql0j\ttie0\ql j\en
 % Mid
-\Notes\zqu E\qu L|\itied0d\qu d&\ibu0h1\qb0g\en
-\notes\sk\sk\ibl1L{-1}\qb1L\sk\nbbl1\qb1M\tql1J|\sk\sk\ttie0\ibbu1d1\qb1{dde}\tqu1g&\nbbu0\qb0i\itieu0j\tqu0j\ttie0\ql j\en
+\Notes\zqu E\qu L|\itied0d\qu d&\Icresc0{-10}0\ibu0h1\qb0g\en
+\notes\sk\sk\ibl1L{-1}\qb1L\sk\nbbl1\qb1M\tql1J|\sk\sk\ttie0\ibbu1d1\qb1{dde}\tqu1g&\nbbu0\qb0i\itieu0j\tqu0j\ttie0\ql j\Tcresc0{-10}7\en
 \bar
 % Bar 17
 \Notes\ibu0L1\zqb0F\qb0M|\ibu1h0\zqb1c\qb1f&\ibl2h1\qb2h\en
@@ -178,16 +179,16 @@
 % Bar 18
 \Notes\ibu0J3\zqb0{-7}\qb0G|\zql{fh}\ql j&\ttie0\hl k\en
 \notes\nbbu0\qb0K\itieu0M\tqu0M|&\en
-\Notes\ttie0\ibl0M{-2}\qb0M|\qu f&\en
+\Notes\ttie0\ibl0M{-2}\qb0M|\qu f&\Idecresc0{-10}0\en
 \notes\nbbl0\qb0M\tql0K|&\en
 % Mid
 \Notes\ibl0M{-2}\qb0M|\qu c&\qp\en
 \notes\nbbl0\qb0M\itieu0K\tql0K|&\en
-\Notes\ttie0\ibu0K{-2}\qb0K|\ibu1d3\qbp1d&\dsp\en
+\Notes\ttie0\ibu0K{-2}\qb0K|\ibu1d3\qbp1d&\Tcresc0{-10}0\dsp\en
 \notes\nbbu0\qb0J\tqu0G|\sk\loff{\nbbu1}\itied0g\tqu1g&\sk\ccu g\en
 \bar
 % Bar 19
-\notes\ibu0K3\zqbp0C\qbp0J\sk\sk\loff{\nbbu0}\tqu0N|\ttie0\hu g&\ibbl0l0\qb0{kll}\tql0l\en
+\notes\ibu0K3\zqbp0C\qbp0J\sk\sk\loff{\nbbu0}\tqu0N|\ttie0\hu g&\zcn{-11}{\mp}\ibbl0l0\qb0{kll}\tql0l\en
 \Notes\ibl0a{-3}\qbp0c|&\ibu1l{-2}\qb1l\en
 \notes\sk\loff{\nbbl0}\tql0M|&\nbbu1\qb1g\itied0g\tqu1g\en
 % Mid
@@ -238,7 +239,7 @@
 \bar
 % Bar 26
 \Notes\zqu D\qu K\sk\zqu E\qu L|\zqu{cf}\qu h\sk\zqu d\qu g&\ibl0j0\qb0j\tql0j\ibl0i0\qb0j\en
-\notes|&\nbbl0\qb0i\tql0j\en
+\notes|&\Idecresc0{-11}0\nbbl0\qb0i\tql0j\en
 % Mid
 \Notes\zqu{GK}\qu{=M}|\zqu f\qu h&\ibl0l{-2}\qb0l\en
 \notes\sk\sk\ql M|\sk\sk\ibu1f0\qb1f\sk\tqu1f&\nbbl0\qb0k\itieu0j\tql0j\ttie0\ibbl0j0\roff{\tbbl0}\qb0{ji}\sk\loff{\nbbl0}\itieu0j\tql0j\en
@@ -248,10 +249,10 @@
 \Notes\ibl0c0\qbp0c|&\en
 \notes\loff{\nbbl0}\itieu1c\tql0c|&\en
 % Mid
-\notes\ttie1\hl c|&\ttie0\ibbl0j2\qb0{jpn}\tql0l\ibbu0j{-2}\qb0{jig}\tqu0e\en
+\notes\ttie1\hl c|&\Tcresc0{-11}0\ttie0\ibbl0j2\qb0{jpn}\tql0l\ibbu0j{-2}\qb0{jig}\tqu0e\en
 \bar
 % Bar 28
-\Notes\zqu C\qu J|\ibu0d0\qbp0d&\ibu1g0\qb1g\en
+\Notes\zqu C\qu J|\ibu0d0\qbp0d&\zcn{-11}{\mp}\ibu1g0\qb1g\en
 \notes|\sk\loff{\nbbu0}\itied0d\tqu0d&\nbbu1\qb1e\itied1g\tqu1g\en
 \Notes\ibl0L2\qb0L\tql0N|\ttie0\qu d&\ttie1\ibu0g{-2}\qb0g\tqu0e\en
 % Mid
@@ -305,7 +306,7 @@
 \bar
 % Bar 35
 \Notes\zqu D\qu K|\zqu a\qu c&\ibu0f2\qb0f\en
-\notes\sk\sk\ql K|\sk\sk\ibu1a0\qb1a\sk\tqu1a&\nbbu0\qb0g\itied0h\tqu0h\ttie0\ibbu0g{-2}\roff{\tbbu0}\qb0{hg}\sk\loff{\nbbu0}\itied0d\tqu0d\en
+\notes\sk\sk\ql K|\sk\sk\ibu1a0\qb1a\sk\tqu1a&\Idecresc0{-11}4\nbbu0\qb0g\itied0h\tqu0h\ttie0\ibbu0g{-2}\roff{\tbbu0}\qb0{hg}\sk\loff{\nbbu0}\itied0d\tqu0d\Tcresc0{-11}4\en
 % Mid
 \notes\huddle\smallnotesize\itieu1M\ibl0M{-3}\qb0M\itieu2K\tql0K|&\en
 \Notes\ibu0L0\ttie1\ttie2\zqb0{GK}\qb0M|\zqu a\qu c&\ttie0\hu d\en
@@ -314,7 +315,7 @@
 \notes\nbbl0\qb0N\tql0K|\sk\loff{\nbbu1}\itied0c\tqu1c&\en
 \bar
 % Bar 36
-\Notes\ibu0L{-4}\zqb0F\qb0M|\ttie0\zqu c\qu f&\ibl1h1\qb1h\en
+\Notes\ibu0L{-4}\zqb0F\qb0M|\ttie0\zqu c\qu f&\zcn{-12}{\mp}\ibl1h1\qb1h\en
 \notes\tqu0J\sk\ibu0N{-3}\qb0a\sk\nbbu0\qb0F\tqu0J|\sk\sk\ibu0c0\qb0c\sk\tqu0c&\nbbl1\qb1i\itieu0j\tql1j\ttie0\ibbl0j0\roff{\tbbl0}\qb0{jk}\sk\loff{\nbbl0}\itieu0j\tql0j\en
 % Mid
 \notes\ibu0L{-2}\zqb0E\qb0L\sk\tqu0J\sk\ibu0L{-2}\qb0L\sk\nbbu0\qb0J\tqu0G|\itied1c\qu c\sk\sk\sk\ibbu0c1\roff{\tbbu0}\ttie1\qb0{cc}\sk\loff{\nbbu0}\itied1e\tqu0e&\ttie0\ibbu0i{-2}\roff{\tbbu0}\qb0{jg}\sk\loff{\nbbu0}\itied0g\tqu0g\ttie0\ibu0g{-1}\qbp0g\sk\sk\loff{\nbbu0}\tqu0e\en
@@ -330,7 +331,7 @@
 \Notes\zqu D\qu K|\zqu c\qu f&\ibl0h1\qb0h\en
 \notes\sk\sk\ql K|\sk\sk\ibu1c0\qb1c\sk\tqu1c&\nbbl0\qb0i\itieu0j\tql0j\ttie0\ibbl0j0\roff{\tbbl0}\qb0{jk}\sk\loff{\nbbl0}\itieu0j\tql0j\en
 % Mid
-\notes\zqu E\qu L\sk\sk\sk\ibl0L{-2}\qb0L\sk\nbbl0\qb0L\tql0J|\ibbu0f{-3}\roff{\tbbu0}\zqb0e\qb0g\tbu0\itied1c\qbp0c\sk\sk\ttie1\ibbu0c2\qb0{cce}\tqu0g&\ttie0\ibl0i0\qb0j\sk\nbbl0\qb0i\itieu0j\tql0j\ttie0\ql j\en
+\notes\zqu E\qu L\sk\sk\sk\ibl0L{-2}\qb0L\sk\nbbl0\qb0L\tql0J|\ibbu0f{-3}\roff{\tbbu0}\zqb0e\qb0g\tbu0\itied1c\qbp0c\sk\sk\ttie1\ibbu0c2\qb0{cce}\tqu0g&\zcn{-11}{\it cresc.}\ttie0\ibl0i0\qb0j\sk\nbbl0\qb0i\itieu0j\tql0j\ttie0\ql j\en
 \bar
 % Bar 39
 \Notes\ibu0M0\zqbp0F\qbp0M|\ibu1i{-1}\zqb1c\qb1f&\ibu2h1\qb2h\en
@@ -341,14 +342,14 @@
 \notes\tqu0K\sk\ibl0M{-2}\qb0M\sk\nbbl0\qb0M\tql0K|\sk\loff{\nbbu1}\tbu1\itied0f\zqb1f\itied1h\qb1h\ttie0\ttie1\ibbu0g0\roff{\tbbu0}\zqb0f\qb0h\tbu0\zqbp0f\qbp0h&\nbbl2\qb2k\itieu0j\tql2j\ttie0\ibbl0k1\roff{\tbbl0}\qb0j\tbl0\qbp0k\en
 \generalmeter{\meterfrac{2}{4}}\changecontext
 % Bar 40
-\Notes\ibu0K2\qb0G|\loffset{1.5}{\Ioctfinup0r}\larpeggio g3\zql g\lq j\ql k&\en
+\Notes\ibu0K2\qb0G|\loffset{1.5}{\Ioctfinup0r}\larpeggio g3\zql g\lq j\ql k&\Icresc0{-5}{-2}\en
 \notes\nbbu0\qb0M\tqu0K|&\en
 \Notes\ibl0K{-3}\qb0M|\roffset{0.7}{\Toctfin0}\larpeggio n3\zql n\lq q\ql r&\en
-\notes\tql0K|&\en
+\notes\tql0K|&\Tcresc0{-5}0\en
 \generalmeter{\meterfrac{4}{4}}\changecontext
 \def\atnextbar{\znotes|&\centerbar{\cpause}\en}%
 % Bar 41
-\notes\ibu0J{-3}\zqb0C\qb0J\sk\tqu0G\sk\ql L|\zhu g\hu j&\ibbl0l0\qb0{kll}\tql0l\ibbu0k{-2}\qb0{lgg}\itied0g\tqu0g\en
+\notes\ibu0J{-3}\zqb0C\qb0J\sk\tqu0G\sk\ql L|\zhu g\hu j&\zcn{-10}{\mf}\ibbl0l0\qb0{kll}\tql0l\ibbu0k{-2}\qb0{lgg}\itied0g\tqu0g\en
 % Mid
 \notes\ibu0J4\qb0F\sk\nbbu0\qb0J\tqu0N\ibl0M{-2}\qb0a\sk\nbbl0\qb0a\tql0K|\ibu0d3\qb0c\sk\nbbu0\qb0c\itied1g\tqu0g\ttie1\ibbu0f1\qb0{gcf}\tqu0h&\ttie0\ibbu0f1\roff{\tbbu0}\qb0{gh}\sk\loff{\nbbu0}\itied0h\tqu0h\ttie0\ibu0h0\qbp0h\sk\sk\loff{\nbbu0}\tqu0h\en
 \bar
@@ -394,7 +395,7 @@
 \notes\ibu0J3\qb0G\sk\nbbu0\qb0M\tqu0K\ibu0L{-2}\qb0M\sk\nbbu0\qb0{=F}\ssk\tqu0{_I}|\ttie0\ttie1\ibbu0f{-1}\roff{\tbbu0}\zqb0d\qb0g\zqb0c\qb0f\sk\loff{\nbbu0}\itied0c\itied1f\zqb0c\tqu0f\ttie0\ttie1\ibbu0e1\roff{\tbbu0}\zqb0c\qb0f\tbu0\qbp0g&\ttie2\ibbu0h{-1}\roff{\tbbu0}\qb0{ih}\sk\loff{\nbbu0}\itied0h\tqu0h\ttie0\ibbu0g{-1}\roff{\tbbu0}\qb0h\tbu0\qbp0g\en
 \bar
 % Bar 49
-\Notes\ibu0L{-4}\zqb0{_E}\qb0{_L}|\ibu1e0\zqb1{_b}\qb1{_e}&\qu g\en
+\Notes\ibu0L{-4}\zqb0{_E}\qb0{_L}|\ibu1e0\zqb1{_b}\qb1{_e}&\zcn{-11}{\mp}\qu g\en
 \notes\tqu0{_I}|\nbbu1\qb1b\tqu1e&\en
 \Notes\ql L|\qu g&\ibu0g3\qb0g\en
 \notes|&\nbbu0\qb0{_h}\itied0i\ssk\tqu0{_i}\en
@@ -420,12 +421,12 @@
 \bar
 % Bar 52
 \Notes\ibu0L0\zqb0G\qb0M|\zqu a\qu c&\ttie0\qu f\en
-\notes\nbbu0\qb0K\itied0M\tqu0M\ttie0\ibu0L{-4}\qb0M\sk\tqu0G|\sk\sk\ibbu0e0\qb0{acf}\tqu0a&\sk\sk\itied0c\qu c\en
+\notes\nbbu0\qb0K\itied0M\tqu0M\ttie0\ibu0L{-4}\qb0M\sk\tqu0G|\sk\sk\ibbu0e0\qb0{acf}\tqu0a&\sk\sk\itied0c\qu c\Icresc0{-11}4\en
 % Mid
-\notes\ibu0G0\zqb0{-7}\qb0G\sk\tqu0G\sk\ibu0I0\qb0G\sk\nbbu0\qb0J\tqu0G|\ibbu0c0\qb0{caM}\itied1c\tqu0c\ttie1\ibbu0c2\roff{\tbbu0}\qb0{cd}\sk\loff{\nbbu0}\tqu0g&\ttie0\itied0c\qu c\sk\sk\sk\ibbu0c2\roff{\tbbu0}\ttie0\qb0{cd}\sk\loff{\nbbu0}\tqu0g\en
+\notes\ibu0G0\zqb0{-7}\qb0G\sk\tqu0G\sk\ibu0I0\qb0G\sk\nbbu0\qb0J\tqu0G|\ibbu0c0\qb0{caM}\itied1c\tqu0c\ttie1\ibbu0c2\roff{\tbbu0}\qb0{cd}\sk\loff{\nbbu0}\tqu0g&\ttie0\itied0c\qu c\sk\sk\sk\Tcresc0{-11}0\ibbu0c2\roff{\tbbu0}\ttie0\qb0{cd}\sk\loff{\nbbu0}\tqu0g\en
 \bar
 % Bar 53
-\notes\ibu0J4\zqb0C\qb0J\sk\tqu0N\sk\ibl0c{-4}\qbp0c\sk\sk\loff{\nbbl0}\tql0M|\ttie0\hu g&\ibbl0l0\qb0{kll}\tql0l\ibbu0k{-2}\qb0{lgg}\itied0g\tqu0g\en
+\notes\ibu0J4\zqb0C\qb0J\sk\tqu0N\sk\ibl0c{-4}\qbp0c\sk\sk\loff{\nbbl0}\tql0M|\ttie0\hu g&\zcn{-11}{\mf}\ibbl0l0\qb0{kll}\tql0l\ibbu0k{-2}\qb0{lgg}\itied0g\tqu0g\en
 % Mid
 \notes\ibu0F4\qb0F\sk\tqu0J\sk\ibl0N0\qb0N\sk\nbbl0\qb0a\tql0N|\ibu0d3\qbp0d\sk\sk\loff{\nbbu0}\itied1c\itied2g\zqb0c\tqu0g\ttie1\ttie2\ibbu0g1\zqb0c\qb0{gcf}\tqu0h&\ttie0\ibbu0g1\roff{\tbbu0}\qb0{gh}\sk\loff{\nbbu0}\itied0h\tqu0h\ttie0\ibu0h0\qbp0h\sk\sk\loff{\nbbu0}\tqu0h\en
 \bar
@@ -449,7 +450,7 @@
 \notes\ibu0K0\qb0G\sk\qb0K\sk\qb0M\sk\tqu0J|\ttie0\ttie1\ibbu0f{-1}\roff{\tbbu0}\zqb0d\qb0g\zqb0c\qb0f\sk\loff{\nbbu0}\itied0c\itied1f\zqb0c\tqu0f\ttie0\ttie1\ibbu0e1\roff{\tbbu0}\zqb0c\qb0{fb}\sk\loff{\nbbu0}\itied0g\tqu0g&\ttie2\ibbu0h{-1}\roff{\tbbu0}\qb0{ih}\sk\loff{\nbbu0}\itied1h\tqu0h\ttie1\ibbu0g{-1}\roff{\tbbu0}\qb0{hg}\sk\loff{\nbbu0}\tqu0g\en
 \bar
 % Bar 57
-\notes\ibu0J{-3}\zqb0C\qb0J\sk\tqu0G|\ttie0\itied0g\hup g&\ibbl0k1\qb0{kll}\tql0l\en
+\notes\ibu0J{-3}\zqb0C\qb0J\sk\tqu0G|\ttie0\itied0g\hup g&\zcn{-11}{\mp}\ibbl0k1\qb0{kll}\tql0l\en
 \Notes\ql L|&\ibu0l{-3}\qb0l\en
 \notes|&\nbbu0\qb0g\itied1g\tqu0g\en
 % Mid
@@ -471,7 +472,7 @@
 \notes|&\nbbl0\qb0i\tql0j\en
 % Mid
 \Notes\zhu{GK}\hu{=M}|\zqup f\qup h&\ibl0l{-2}\qb0l\en
-\notes|\sk\sk\sk\sk\cu f&\nbbl0\qb0k\itieu0j\tql0j\ttie0\ibbl0j0\roff{\tbbl0}\qb0{ji}\sk\loff{\nbbl0}\itieu0j\tql0j\en
+\notes|\sk\sk\sk\sk\cu f&\nbbl0\qb0k\zcn{-11}{\it dim.}\itieu0j\tql0j\ttie0\ibbl0j0\roff{\tbbl0}\qb0{ji}\sk\loff{\nbbl0}\itieu0j\tql0j\en
 \bar
 % Bar 61
 \notes\ibbu0I5\qb0F\tbbu0\qb0J\itieu1a\tqu0a\sk\ttie1\ibl0M{-2}\qbp0a\sk\sk\loff{\nbbl0}\tql0J|\ibu0g{-2}\roff{\pt c\pt f\pt g}\zqb0c\rq g\qb0f\sk\sk\loff{\nbbu0}\tqu0c\ibbu0h0\qb0{fjg}\tqu0f&\ttie0\ql j\sk\sk\sk\qp\en
@@ -480,12 +481,12 @@
 \notes\sk\loff{\nbbu0}\tqu0H|&\tqu1e\en
 \bar
 % Bar 62
-\Notes\zhu D\hu K|\zhu a\hu c&\ibu0f{-1}\qb0{fgc}\tqu0N\en
+\Notes\zhu D\hu K|\zhu a\hu c&\ibu0f{-1}\qb0f\Idecresc0{-11}0\qb0{gc}\tqu0N\en
 % Mid
-\NOtes\zhu{-7}\hu G|\zqu M\qu a\zqu c\rq g\qu f&\qu c\qu g\en
+\NOtes\zhu{-7}\hu G|\zqu M\qu a\zqu c\rq g\qu f&\qu c\Tcresc0{-11}0\qu g\en
 \bar
 % Bar 63
-\NOTEs\ssk\ssk\Fermataup N\zwh{C}\wh J|\ssk\ssk\larpeggio g4\Fermataup n\zwh{gj}\lw k\zwh l\wh n&\ssk\ssk\Fermataup l\wh j\en
+\NOTEs\ssk\ssk\Fermataup N\zwh{C}\wh J|\ssk\ssk\larpeggio g4\Fermataup n\zwh{gj}\lw k\zwh l\wh n&\ssk\ssk\zcn{-7}{\p}\Fermataup l\wh j\en
 %
 % Wrap up serious business
 \Endpiece%
