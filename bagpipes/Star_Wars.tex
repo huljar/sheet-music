@@ -1,0 +1,63 @@
+\input musixtex
+\input musixsty
+\input musixps
+
+% Setup
+\generalmeter{\meterfrac44} % 4/4 meter
+\generalsignature2 % 2 sharp signs
+%\nobarnumbers
+
+% Title
+\fulltitle{Star Wars Medley}
+\subtitle{Star Wars}
+\title{Star Wars Medley}
+\author{}
+\shortauthor{Star Wars}
+\othermention{}
+\maketitle
+
+% % % some bagpipe macros % % %
+\makeatletter
+\newdimen\@spacecache
+
+\def\startembellishment{%
+    \tinynotesize%
+    \@spacecache=\noteskip%
+    \noteskip=0.5\elemskip}
+\def\endembellishment{%
+    \normalnotesize%
+    \noteskip=\the\@spacecache}
+
+% a single grace note
+\def\gr#1{%
+    \startembellishment%
+    \cccu{#1}%
+    \endembellishment}
+
+% Light D Strike
+\def\lds{%
+    \startembellishment%
+    \ibbbu5n{-5}\qb5{nk}\tqu5j%
+    \endembellishment}
+
+% Heavy D Strike
+\def\hds{%
+    \startembellishment%
+    \ibbbu5n{-5}\qb5{nk}\tqu5g%
+    \endembellishment}
+
+% D Throw (light/heavy)
+\def\dth{%
+    \startembellishment%
+    \ibbbu5j2\qb5{gk}\tqu5j%
+    \endembellishment}
+
+\makeatother
+% % % end bagpipe macros % % %
+
+% Start serious business
+\startpiece%
+\Notes\ql g\gr n\ql h\lds\ql k\hds\ql k\dth\ql k\en
+% Wrap up serious business
+\Endpiece%
+\end
