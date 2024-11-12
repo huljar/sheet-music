@@ -5,7 +5,7 @@
 % Setup
 \generalmeter{\meterfrac44} % 4/4 meter
 \generalsignature2 % 2 sharp signs
-\nobarnumbers
+%\nobarnumbers
 
 % Title
 \fulltitle{Star Wars Medley}
@@ -43,11 +43,15 @@
 \def\grg{%
     \gr n}
 
-% common tapping grace notes (a, low g)
+% common tapping grace notes (a, low g, f, c)
 \def\gra{%
     \gr h}
 \def\grlg{%
     \gr g}
+\def\grf{%
+    \gr m}
+\def\grc{%
+    \gr j}
 
 % Light D Strike
 \def\lds{%
@@ -145,7 +149,7 @@
 % bar 11
 \notesp\grg\ibl0k1\qb0k\bltext0\qb0l\tql0m\ibl0j{-3}\qbp0l\loff{\bltext0}\tql0h\en
 \NOtes\grg\ql i\en
-\notesp\ibl0h0\qb0h\bltext0\grd\tql0h\en
+\notesp\ibl0h0\qbp0h\bltext0\grd\tql0h\en
 \bar
 % bar 12
 \NOtesp\qlp i\en
@@ -173,21 +177,48 @@
 \bar
 % bar 18
 \NOtes\grg\ql i\grd\ql i\gre\ql i\en
-\notesp\ibl0g4\qbp0g\loff{\bltext0}\tql0k\en
+\Notesp\ibl0g4\qbp0g\en
+\notes\loff{\nbbl0}\tql0k\en
 \bar
 % bar 19
 \NOtes\grg\ql i\en
-\notesp\ibl0g4\qbp0g\loff{\bltext0}\tql0k\en
+\Notesp\ibl0g4\qbp0g\en
+\notes\loff{\nbbl0}\tql0k\en
 \NOTes\grg\hl i\en
 \bar
 % bar 20
 \NOtes\ql m\grg\ql m\gre\ql m\en
-\notesp\ibl0n{-4}\qbp0n\loff{\bltext0}\tql0k\en
+\Notesp\ibl0n{-4}\qbp0n\en
+\notes\loff{\nbbl0}\tql0k\en
 \bar
 % bar 21
 \NOtes\ql i\en
-\notesp\ibl0g4\qbp0g\loff{\bltext0}\tql0k\en
+\Notesp\ibl0g4\qbp0g\en
+\notes\loff{\nbbl0}\tql0k\en
 \NOTes\grg\hl i\en
+\bar
+% bar 22
+\NOtes\ql o\en
+\Notes\ibl0h0\qbp0h\en
+\notes\grd\loff{\nbbl0}\tql0h\en
+\NOtes\ql o\en
+\Notes\ibl0n0\qbp0n\en
+\notes\grf\loff{\nbbl0}\tql0n\en
+\bar
+% bar 23
+\Notes\ibbl0m0\qb0m\tbbl0\qb0l\itieu0m\tql0m\en
+\Notes\ttie0\cl m\cl i\en
+\NOtes\dble\ql l\en
+\Notesp\ibl0k0\qbp0k\en
+\notes\grc\loff{\nbbl0}\tql0k\en
+\bar
+% bar 24
+\Notes\ibbl0j0\qb0j\tbbl0\qb0i\itieu0j\tql0j\en
+% scratchpad
+\NOtes\ttie0\cl{jgigikikm}\en
+\bar
+\Uptext{Repeat bar 22+23}
+\bar
 % Wrap up serious business
 \Endpiece%
 \end
