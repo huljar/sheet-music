@@ -13,7 +13,7 @@
 \title{Star Wars Medley}
 \author{}
 \shortauthor{Star Wars}
-\othermention{}
+\othermention{Bagpipes}
 \maketitle
 
 % % % some bagpipe macros % % %
@@ -79,11 +79,13 @@
 
 % common doublings
 \def\dblc{%
-    \dbl{n}{j}{k}{-4}}
+    \dbl njk{-4}}
 \def\dbld{%
-    \dbl{n}{k}{l}{-3}}
+    \dbl nkl{-3}}
 \def\dble{%
-    \dbl{n}{l}{m}{-2}}
+    \dbl nlm{-2}}
+\def\dblg{%
+    \dbl nmn0}
 
 % half doubling
 \def\hd#1#2#3{%
@@ -173,7 +175,7 @@
 \Notes\ibl0o{-2}\qb0{onm}\tql0l\ibl0k{-2}\qb0{kji}\tql0h\en
 \bar
 % bar 17
-\NOTes\hl o\hl l\en
+\NOTes\hdha\hl o\hde\hl l\en
 \bar
 % bar 18
 \NOtes\grg\ql i\grd\ql i\gre\ql i\en
@@ -206,19 +208,52 @@
 \notes\grf\loff{\nbbl0}\tql0n\en
 \bar
 % bar 23
-\Notes\ibbl0m0\qb0m\tbbl0\qb0l\itieu0m\tql0m\en
-\Notes\ttie0\cl m\cl i\en
+\notes\ibbl0m0\qb0m\tbbl0\qb0l\en
+\Notes\itieu0m\tql0m\ttie0\cl m\cl i\en
 \NOtes\dble\ql l\en
 \Notesp\ibl0k0\qbp0k\en
 \notes\grc\loff{\nbbl0}\tql0k\en
 \bar
 % bar 24
-\Notes\ibbl0j0\qb0j\tbbl0\qb0i\itieu0j\tql0j\en
-% scratchpad
-\NOtes\ttie0\cl{jgigikikm}\en
+\notes\ibbl0j0\qb0j\tbbl0\qb0i\en
+\Notes\itieu0j\tql0j\ttie0\cl j\cl g\en
+\NOtes\grg\ql i\en
+\Notesp\ibl0g2\qbp0g\en
+\notes\loff{\nbbl0}\tql0i\en
 \bar
-\Uptext{Repeat bar 22+23}
+% bar 25
+\NOtes\grg\ql k\en
+\Notesp\ibl0i2\qbp0i\en
+\notes\loff{\nbbl0}\tql0k\en
+\NOTes\dblg\hl m\en
 \bar
+% bar 26
+\NOtes\ql o\en
+\Notes\ibl0h0\qbp0h\en
+\notes\grd\loff{\nbbl0}\tql0h\en
+\NOtes\ql o\en
+\Notes\ibl0n0\qbp0n\en
+\notes\grf\loff{\nbbl0}\tql0n\en
+\bar
+% bar 27
+\notes\ibbl0m0\qb0m\tbbl0\qb0l\en
+\Notes\itieu0m\tql0m\ttie0\cl m\cl i\en
+\NOtes\dble\ql l\en
+\Notesp\ibl0k0\qbp0k\en
+\notes\grc\loff{\nbbl0}\tql0k\en
+\bar
+% bar 28
+\notes\ibbl0j0\qb0j\tbbl0\qb0i\en
+\Notes\itieu0j\tql0j\ttie0\cl j\cl g\en
+\NOtes\grg\ql i\en
+\Notesp\ibl0g4\qbp0g\en
+\notes\loff{\nbbl0}\tql0k\en
+\bar
+% bar 29
+\NOtes\grg\ql i\en
+\Notesp\ibl0g4\qbp0g\en
+\notes\loff{\nbbl0}\tql0k\en
+\NOTes\grg\hl i\en
 % Wrap up serious business
 \Endpiece%
 \end
