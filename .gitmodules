@@ -1,4 +1,8 @@
 [submodule "musixtab"]
     path = musixtab
-    url = https://github.com/huljar/musixtab
+    url = https://github.com/huljar/musixtab.git
     branch = master
+[submodule "musixbag"]
+	path = musixbag
+	url = https://github.com/huljar/musixbag.git
+    branch = main
