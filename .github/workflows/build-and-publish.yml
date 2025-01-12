@@ -67,7 +67,7 @@ jobs:
   deploy-pdf-files:
     environment:
       name: github-pages
-      url: ${{ step.deployment.outputs.page_url }}
+      url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build-pdf-files setup-pages
     steps:
