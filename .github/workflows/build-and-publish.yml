@@ -36,7 +36,7 @@ jobs:
 
   # Setup GitHub Pages
   setup-pages:
-    environment: github-pages
+    environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
