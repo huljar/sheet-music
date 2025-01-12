@@ -12,3 +12,6 @@
 
 # vim swap files
 .*.swp
+
+# build dir
+/build
