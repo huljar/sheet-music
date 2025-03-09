@@ -1,5 +1,5 @@
 # Define the source directory, build directory, and the musixtex command
-BASE_DIR := $(shell git rev-parse --show-toplevel)
+BASE_DIR := $(patsubst %/,%,$(dir $(abspath $(lastword $(MAKEFILE_LIST)))))
 SRC_DIR := $(BASE_DIR)
 BUILD_DIR := $(BASE_DIR)/build
 MUSIXTEX := musixtex
