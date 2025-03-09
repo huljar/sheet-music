@@ -44,7 +44,7 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-  # Single deploy job since we're just deploying
+  # Deploy docs to Pages
   deploy-docs:
     environment:
       name: github-pages
@@ -63,7 +63,7 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  # Deploy artifacts
+  # Deploy compiled PDFs to Pages
   deploy-pdf-files:
     environment:
       name: github-pages
