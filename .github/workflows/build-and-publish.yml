@@ -1,5 +1,6 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+# Workflow to compile all .tex files with MusiXTeX, then deploy the resulting .pdf files and the contents of the docs
+# folder to Github Pages
+name: Compile and deploy content to Pages
 
 on:
   # Runs on pushes targeting the default branch
