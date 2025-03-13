@@ -60,11 +60,20 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+      - name: Generate site
+        run: |
+          pip install "pelican[markdown]"
+          cd docs
+          make publish
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: compiled-docs
-          path: "docs"
+          path: "docs/output"
 
   # Deploy everything to Pages
   deploy-pages:
@@ -75,14 +84,14 @@ jobs:
     needs: [setup-pages, build-pdf-files, build-docs]
     steps:
       - name: Create temporary directory
-        run: mkdir dist
+        run: mkdir -p dist/pdfs
       - name: Download sheet music artifact
         uses: actions/download-artifact@v4
         with:
           name: compiled-sheet-music
-          path: dist
+          path: dist/pdfs
       - name: Delete sheet music artifact
-        uses: GeekyEggo/delete-artifact@v5.1.0
+        uses: GeekyEggo/delete-artifact@v5
         with:
           name: compiled-sheet-music
       - name: Download docs artifact
@@ -91,7 +100,7 @@ jobs:
           name: compiled-docs
           path: dist
       - name: Delete docs artifact
-        uses: GeekyEggo/delete-artifact@v5.1.0
+        uses: GeekyEggo/delete-artifact@v5
         with:
           name: compiled-docs
       - name: Upload Pages-compatible artifact
