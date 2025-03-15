@@ -1,5 +1,9 @@
+from datetime import datetime
+
 AUTHOR = 'Julian Harttung'
 SITENAME = 'Sheet Music'
+SITESUBTITLE = 'A collection sheet music written in MusiXTeX'
+COPYRIGHT = datetime.now().year
 SITEURL = ""
 
 PATH = "content"
@@ -15,21 +19,25 @@ TRANSLATION_FEED_ATOM = None
 AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
+# No tag generation
+TAGS_SAVE_AS = ''
+TAG_SAVE_AS = ''
+
 # Blogroll
-LINKS = (
-    ("Pelican", "https://getpelican.com/"),
-    ("Python.org", "https://www.python.org/"),
-    ("Jinja2", "https://palletsprojects.com/p/jinja/"),
-    ("You can modify those links in your config file", "#"),
-)
+LINKS = ()
 
 # Social widget
 SOCIAL = (
-    ("You can add links in your config file", "#"),
-    ("Another social link", "#"),
+    ("github", "https://github.com/huljar"),
+    ("medium", "https://medium.com/@huljar"),
 )
+
+GITHUB_URL = "https://github.com/huljar/sheet-music"
 
 DEFAULT_PAGINATION = 10
 
 # Uncomment following line if you want document-relative URLs when developing
 # RELATIVE_URLS = True
+
+# Custom theme
+THEME = 'themes/Peli-Kiera'

@@ -6,3 +6,7 @@
 	path = musixbag
 	url = https://github.com/huljar/musixbag.git
     branch = main
+[submodule "docs/themes/Peli-Kiera"]
+	path = docs/themes/Peli-Kiera
+	url = https://github.com/aleylara/Peli-Kiera.git
+    branch = master
