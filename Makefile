@@ -11,7 +11,6 @@ TEX_FILES := $(shell find "$(SRC_DIR)" -type f -name "*.tex" -not -path "$(BASE_
 # Define the corresponding .pdf files in the build directory
 PDF_FILES := $(patsubst $(SRC_DIR)/%.tex,$(BUILD_DIR)/%.pdf,$(TEX_FILES))
 
-
 # Default target
 all: $(PDF_FILES)
 
@@ -27,8 +26,34 @@ clean:
 # Print some help
 help:
 	@echo "Usage:"
-	@echo "  all       -- build all TeX files with MusiXTeX"
-	@echo "  clean     -- clean up the built files"
-	@echo "  help      -- print this help"
+	@echo "  all     -- build all TeX files with MusiXTeX"
+	@echo "  clean   -- clean up the built files"
+	@echo "  docs    -- generate documentation pages"
+	@echo "  help    -- print this help"
 
-.PHONY: all clean help
+# Define helper variables for docs generation
+DOCS_DIR := $(BASE_DIR)/docs
+PAGES_DIR := $(DOCS_DIR)/content/pages
+CATEGORY_PAGES := $(foreach directory, $(sort $(dir $(PDF_FILES))), $(patsubst $(BUILD_DIR)/%/,$(PAGES_DIR)/%.md,$(directory)))
+
+# Helper function to capitalize the first letter of a string
+capitalize = $(shell echo $(1) | sed 's/^[a-z]/\U&/')
+
+# Generate docs for the compiled files
+docs: $(CATEGORY_PAGES)
+	cd "$(DOCS_DIR)" && make publish
+
+# Build .md from all corresponding .pdf
+$(PAGES_DIR)/%.md: $(BUILD_DIR)/%/*.pdf
+	@echo "Generating $(notdir $@)"
+	@echo "Title: $(call capitalize, $(basename $(notdir $@)))" > $@
+	@echo "Author: Julian Harttung" >> $@
+	@echo "" >> $@
+	@echo "# $(call capitalize, $(basename $(notdir $@))) sheet music listing" >> $@
+	@echo "" >> $@
+	@echo "Here's a list of all the compiled PDFs for $(basename $(notdir $@)):" >> $@
+	@echo "" >> $@
+	@echo "$(patsubst $(BUILD_DIR)/%,%,$^)" | tr ' ' '\n' | sed 's/\([^ ]*\)/* [\1](..\/\1)/g' >> $@
+
+
+.PHONY: all clean docs help
