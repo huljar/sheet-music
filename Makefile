@@ -54,7 +54,7 @@ $(PAGES_DIR)/%.md: .FORCE
 	@echo "" >> $@
 	@echo "Here's a list of all the compiled PDFs for $(basename $(notdir $@)):" >> $@
 	@echo "" >> $@
-	@echo "$(patsubst $(BUILD_DIR)/%,%,$(filter $(BUILD_DIR)/$(basename $(notdir $@))/%,$(PDF_FILES)))" | tr ' ' '\n' | sed 's/\([^ ]*\)/* [\1](..\/\1)/g' >> $@
+	@echo "$(patsubst $(BUILD_DIR)/%,%,$(filter $(BUILD_DIR)/$(basename $(notdir $@))/%,$(PDF_FILES)))" | tr ' ' '\n' | sed 's/\([^ ]*\)/* [\1](..\/pdfs\/\1)/g' >> $@
 
 .PHONY: all clean docs help
 .FORCE:
