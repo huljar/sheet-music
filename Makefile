@@ -38,13 +38,14 @@ CATEGORY_PAGES := $(foreach directory, $(sort $(dir $(PDF_FILES))), $(patsubst $
 
 # Helper function to capitalize the first letter of a string
 capitalize = $(shell echo $(1) | sed 's/^[a-z]/\U&/')
+getdeps = $(shell echo $(PDF_FILES) | tr ' ' '\n' | grep '^$(BUILD_DIR)/$(1)/' | tr '\n' ' ')
 
 # Generate docs for the compiled files
 docs: $(CATEGORY_PAGES)
 	cd "$(DOCS_DIR)" && make publish
 
-# Build .md from all corresponding .pdf
-$(PAGES_DIR)/%.md: $(BUILD_DIR)/%/*.pdf
+# Build .md using all corresponding .pdf
+$(PAGES_DIR)/%.md: .FORCE
 	@echo "Generating $(notdir $@)"
 	@echo "Title: $(call capitalize, $(basename $(notdir $@)))" > $@
 	@echo "Author: Julian Harttung" >> $@
@@ -53,7 +54,7 @@ $(PAGES_DIR)/%.md: $(BUILD_DIR)/%/*.pdf
 	@echo "" >> $@
 	@echo "Here's a list of all the compiled PDFs for $(basename $(notdir $@)):" >> $@
 	@echo "" >> $@
-	@echo "$(patsubst $(BUILD_DIR)/%,%,$^)" | tr ' ' '\n' | sed 's/\([^ ]*\)/* [\1](..\/\1)/g' >> $@
-
+	@echo "$(patsubst $(BUILD_DIR)/%,%,$(filter $(BUILD_DIR)/$(basename $(notdir $@))/%,$(PDF_FILES)))" | tr ' ' '\n' | sed 's/\([^ ]*\)/* [\1](..\/\1)/g' >> $@
 
 .PHONY: all clean docs help
+.FORCE:
