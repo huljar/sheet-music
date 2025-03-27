@@ -1,0 +1,73 @@
+\input musixtex
+\input musixsty
+\input musixps
+\input musixbag
+
+% Setup
+\generalmeter{\meterfrac44} % 4/4 meter
+\generalsignature2 % 2 sharp signs
+\nobarnumbers
+
+% Title
+\fulltitle{Wir Lieben Dudelsack}
+\subtitle{Feuerschwanz}
+\title{Wir Lieben Dudelsack}
+\author{Hauptmann, Prinz Hodenherz, Hans d. Aufrechte}
+\shortauthor{Feuerschwanz}
+\othermention{Bagpipes (Refrain and Solo)}
+\maketitle
+
+% Start serious business
+\startpiece%
+% bar 1 (refrain)
+\zleftrepeat
+\NOtes\ql l\en
+\Notes\ibl0h1\qb0h\tql0i\ibl0k{-1}\qb0k\tql0j\en
+\NOtes\ql i\en
+\bar
+% bar 2
+\Notes\ibl0k1\qb0{kln}\tql0m\en
+\NOtes\ql{lk}\en
+\bar
+% bar 3
+\NOtes\ql l\en
+\Notes\ibl0h1\qb0h\tql0i\ibl0k{-1}\qb0k\tql0j\en
+\NOtes\ql i\en
+\setvolta1\bar
+% bar 4
+\Notes\ibl0k0\qb0{kl}\grg\qb0l\tql0k\en
+\NOTes\hl i\en
+\endvoltabox\setvolta2\rightrepeat
+% bar 5
+\NOTEs\wh h\en
+\alaligne
+% bar 6 (solo)
+\zleftrepeat
+\Notes\grg\ibl0h0\qb0{hlh}\tql0i\ibl0j{-1}\qb0k\en
+\notes\nbbbl0\iBslurd00\qb0{jkjk}\tbbl0\slurtext5\tBslur00\qb0j\en
+\Notes\qb0i\tql0g\en
+\bar
+% bar 7
+\Notes\grg\ibl0h0\qb0{hlh}\tql0l\ibl0n{-1}\qb0n\en
+\notes\nbbbl0\qb0m\tbbbl0\qb0n\tbbl0\qb0m\en
+\Notes\qb0l\tql0k\en
+\alaligne
+% bar 8
+\Notes\grg\ibl0h0\qb0{hlh}\tql0i\ibl0j{-1}\qb0k\en
+\notes\nbbbl0\iBslurd00\qb0{jkjk}\tbbl0\slurtext5\tBslur00\qb0j\en
+\Notes\qb0i\tql0g\en
+\setvolta1\bar
+% bar 9
+\Notes\grg\ibl0h1\qb0h\en
+\notes\grg\nbbl0\qb0j\itieu0i\tql0i\ttie0\ibbl0j{-1}\qb0i\grg\tbbl0\qb0j\en
+\Notes\tql0h\en
+\notes\grg\ibbl0h0\qb0{hji}\tql0j\en
+\Notes\grg\ibl0h{-1}\qb0h\tql0g\en
+\endvoltabox\setvolta2\rightrepeat
+% bar 10
+\NOTes\grg\hl h\en
+\Notes\grg\ibl0h1\qb0{hij}\tql0i\ibl0j1\qb0{jkj}\tql0k\en
+\endvolta\alaligne
+% Wrap up serious business
+\Endpiece%
+\end
