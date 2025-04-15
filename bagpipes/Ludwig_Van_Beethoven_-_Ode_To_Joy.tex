@@ -1,0 +1,79 @@
+\input musixtex
+\input musixsty
+\input musixps
+\input musixbag
+
+% text helpers
+\def\luptext#1{\lchar{10}{#1}}
+\def\lUptext#1{\lchar{14}{#1}}
+
+% Setup
+\generalmeter{\meterfrac44} % 4/4 meter
+\generalsignature2 % 2 sharp signs
+\nobarnumbers
+
+% Title
+\fulltitle{Ode To Joy}
+\subtitle{Ludwig Van Beethoven}
+\title{Ode To Joy}
+\author{Ludwig Van Beethoven}
+\shortauthor{Ludwig Van Beethoven}
+\othermention{Bagpipes}
+\maketitle
+
+% Start serious business
+\startpiece%
+% Bar 1
+\zleftrepeat
+\NOtes\loffset3{\segno n}\grg\ql m\gre\ql m\dblg\ql{no}\en
+\bar
+% Bar 2
+\NOtes\grg\ql{on}\grha\ql{ml}\en
+\bar
+% Bar 3
+\NOtes\dth\ql k\grc\ql k\dble\ql{lm}\en
+\setvoltabox1\alaligne
+% Bar 4
+\NOtesp\grg\qlp m\en
+\Notes\cl l\en
+\NOTes\gra\hl l\en
+\endvoltabox\setvolta2\rightrepeat
+% Bar 5
+\NOtesp\dble\qlp l\en
+\Notes\cl k\en
+\NOTes\lds\hl k\luptext{\loff{Fine}}\en
+\endvolta\setdoubleBAR\bar
+% Bar 6
+\NOtes\coda n\dble\ql l\gra\ql l\grg\ql m\dth\ql k\en
+\alaligne
+% Bar 7
+\NOtes\grg\ql l\en
+\Notes\ibl0m1\qb0m\tql0n\en
+\NOtes\grha\ql m\dth\ql k\en
+\bar
+% Bar 8
+\NOtes\grg\ql l\en
+\Notes\ibl0m1\qb0m\tql0n\en
+\NOtes\dbl omn{-2}\ql{ml}\en
+\bar
+% Bar 9
+\NOtes\dth\ql{kl}\Birl\ql h\fermataup m\ql m\lUptext{D.S. al coda}\en
+\setdoublebar\alaligne
+% Bar 10
+\NOtes\coda n\dble\ql l\Birl\ql h\grg\ql m\dth\ql k\en
+\bar
+% Bar 11
+\NOtes\grg\ql l\en
+\Notes\ibl0m1\qb0m\tql0n\en
+\NOtes\grha\ql m\Birl\ql h\en
+\bar
+% Bar 12
+\NOtes\grg\ql l\en
+\Notes\ibl0m1\qb0m\tql0n\en
+\NOtes\dbl omn{-2}\ql{ml}\en
+\bar
+% Bar 13
+\NOtes\dth\ql{kl}\Birl\ql h\fermataup m\ql m\lUptext{D.S. al fine}\en
+% Wrap up serious business
+\setdoublebar\Endpiece%
+\end
